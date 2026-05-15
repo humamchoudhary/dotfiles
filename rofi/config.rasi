@@ -1,0 +1,78 @@
+configuration {
+    modi: "drun,run";
+    font: "JetBrains Mono Nerd Font 11";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    drun-display-format: "{name}";
+    display-drun: "";
+    display-run: "";
+    sidebar-mode: false;
+    matching: "fuzzy";
+    sorting-method: "levenshtein";
+}
+
+@theme "/dev/null"
+
+window {
+    background: #000000;
+    border: 1px;
+    padding: 4px;
+    border-color: #0a0a0a;
+}
+
+mainbox {
+    background: #000000;
+    padding: 0;
+}
+
+inputbar {
+    background: #000000;
+    children: [entry];
+    padding: 8px;
+}
+
+entry {
+    background: #000000;
+    text-color: #999999;
+    placeholder: "search";
+    placeholder-color: #333333;
+    padding: 4px 8px;
+}
+
+listview {
+    background: #000000;
+    padding: 0;
+    columns: 1;
+    lines: 8;
+}
+
+element {
+    background: #000000;
+    padding: 6px 8px;
+    border-radius: 0;
+    spacing: 8px;
+}
+
+element selected {
+    background: #0a0a0a;
+}
+
+element-text {
+    background: transparent;
+    text-color: #999999;
+}
+
+element selected element-text {
+    text-color: #cccccc;
+}
+
+element-icon {
+    background: transparent;
+    size: 16px;
+}
+
+error-message {
+    background: #000000;
+    text-color: #cc4444;
+    padding: 8px;
+}
