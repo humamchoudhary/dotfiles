@@ -1,48 +1,99 @@
+@import './colors/colors.css';
+
 * {
-    font-family: "JetBrains Mono Nerd Font";
+    all: unset;
+    font-family:  "Symbols Nerd Font","JetBrainsPropo Nerd Font", sans-serif;
     font-size: 11px;
-    color: #999999;
+    border-radius: 0 0 10px 10px;
 }
 
 window#waybar {
-    background: #000000;
-    border-bottom: 1px solid #0a0a0a;
+    background: transparent;
+}
+
+/*  LEFT   */
+
+#workspaces {
+background: @background;
+padding: 5px 10px;
+}
+
+#workspaces button:not(:last-child) {
+    margin-right: 10px; /* Adjust this value for the gap size */
 }
 
 #workspaces button {
     background: transparent;
-    color: #555555;
-    padding: 0 8px;
-    border: none;
+    color: @text;
+    padding: 2px 10px;
+    border-radius: 10px 10px;
+    transition: all 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    margin-bottom:5px;
+}
+#workspaces button:hover,#bluetooth:hover,#pulseaudio:hover, #network:hover{
+    background-color: @accent_muted;
 }
 
 #workspaces button.active {
-    color: #999999;
-    background: #0a0a0a;
+    padding: 2px 20px;
+    color: @background;
+    background: @accent;
+    font-weight: bold;
 }
 
-#window {
-    color: #777777;
-    padding: 0 12px;
+#custom-special-wp-bg{
+background: @background;
+padding: 5px 15px;
+font-size: 18px; 
 }
 
-#pulseaudio,
-#network,
-#battery,
-#clock,
-#tray {
-    padding: 0 10px;
-    background: transparent;
+#custom-special-wp-bg.active{
+background-color: #FFFFFF;
 }
 
-#battery.warning {
-    color: #cc4444;
+#custom-launcher{
+background: @background;
+padding: 5px 15px;
+font-size: 18px; 
 }
 
-#pulseaudio.muted {
-    color: #444444;
+#custom-notification{
+background: @background;
+padding: 5px 15px;
+font-size: 18px; 
 }
 
-#network.disconnected {
-    color: #444444;
+#custom-musicplayer{
+background: @background;
+padding: 5px 15px;
+font-size: 12px;
+min-width: 200px;
+}
+
+/*  MIDDLE    */
+
+#clock {
+  padding: 2 20px;
+  background: @background;
+  color: @text;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+
+/*    RIGHT     */
+.modules-right{
+    background: @background;
+    padding: 5px 10px;
+    padding-bottom:10px;
+}
+
+
+.modules-right  *{
+    background-color: @overlay;
+    color: @text;
+    padding: 2px 10px;
+    border-radius: 10px 10px;
+    transition: all 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    font-size:12px;
 }

@@ -1,0 +1,18 @@
+-- # ── Float these ────────────────────────────────────────────────────────────────
+-- windowrulev2 = float, class:^(pavucontrol)$
+-- windowrulev2 = float, class:^(blueman-manager)$
+-- windowrulev2 = float, class:^(nm-connection-editor)$
+--
+-- # ── Picture-in-Picture ────────────────────────────────────────────────────────
+-- windowrulev2 = float, title:^(Picture-in-Picture)$
+-- windowrulev2 = pin,  title:^(Picture-in-Picture)$
+-- windowrulev2 = size 20% 20%, title:^(Picture-in-Picture)$
+--
+-- # ── Terminal opacity ──────────────────────────────────────────────────────────
+-- windowrulev2 = opacity 1.0, class:^(kitty)$
+--
+-- # ── Rofi ──────────────────────────────────────────────────────────────────────
+-- windowrulev2 = float,    class:^(Rofi)$
+-- windowrulev2 = pin,      class:^(Rofi)$
+-- windowrulev2 = stayfullscreen, class:^(Rofi)$
+return {}

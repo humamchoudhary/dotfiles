@@ -1,18 +1,49 @@
 {
-    "layer": "top",
+    "layer": "bottom",
     "position": "top",
-    "height": 24,
-    "spacing": 0,
+    "height": 40,
+    "spacing": 10,
+    "margin":"0 10",
 
-    "modules-left":  ["hyprland/workspaces"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["pulseaudio", "network", "battery", "clock", "tray"],
+    "modules-left": [ "custom/launcher","custom/notification","hyprland/workspaces","custom/special-wp-bg","custom/musicplayer"],
+    "modules-center":["clock"],
+    "modules-right": ["backlight","pulseaudio","bluetooth", "network#wifi","network#eth", "battery"],
 
     "hyprland/workspaces": {
         "format": "{id}",
         "active-only": false,
-        "on-scroll-up": "hyprctl dispatch workspace e-1",
-        "on-scroll-down": "hyprctl dispatch workspace e+1"
+        "on-scroll-up": "hyprctl eval 'hl.dispatch(hl.dsp.focus({workspace = \"+1\"}))'",
+        "on-scroll-down": "hyprctl eval 'hl.dispatch(hl.dsp.focus({workspace = \"-1\"}))'"
+    },
+
+    "custom/launcher":{
+        "format": "\uf40e",
+        "on-click": "ags toggle AppLauncher",
+        "tooltip": false
+    },
+    "custom/notification":{
+        "format": "\udb80\udc9a",
+        "on-click": "swaync-client -t",
+        "tooltip": false
+    },
+
+    "custom/musicplayer": {
+        "format": "{}",
+        "return-type": "json",
+        "exec": "waybar-module-music  -a 15 --marquee --title-width 25  --effect-speed 500",
+        "on-click":"ags toggle Music"
+    },
+
+    "custom/special-wp-bg":{
+        "format":"\ue795",
+        "on-click": "hyprctl eval 'hl.dispatch(hl.dsp.workspace.toggle_special(\"bg\"))'"
+    },
+
+    "clock": {
+        "format": "{:%A, %d %B - %I:%M %p}",
+        "format-alt": "{:%A, %d %B - %I:%M %p}",
+        "interval": 30,
+        "on-click":"ags toggle Clock"
     },
 
     "hyprland/window": {
@@ -20,34 +51,52 @@
         "max-length": 40
     },
 
-    "pulseaudio": {
-        "format": "{volume}%",
-        "format-muted": "muted",
-        "on-click": "pavucontrol",
-        "scroll-step": 5
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "<span font-size='12000'>{icon}</span> <span font-size='10000'>{percent}%</span>",
+        "format-icons": ["\udb80\udcde", "\udb80\udcdf","\udb80\udce0"]
     },
 
-    "network": {
-        "format-wifi": "{essid}",
-        "format-ethernet": "eth",
-        "format-disconnected": "off",
-        "on-click": "nm-connection-editor"
+    "pulseaudio": {
+        "format": "<span font-size='12000'>{icon}</span>   <span font-size='10000'>{volume}%</span>",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "\ueee8",
+        "format-icons": ["\uf026","\uf027","\uf028"],
+        "scroll-step": 1,
+        "on-click": "ags toggle Audio",
+        "ignored-sinks": ["Easy Effects Sink"],
+        "tooltip":false
+    },
+
+    "bluetooth": {
+        "format": "<span font-size='12000'></span>",
+        "format-connected": "<span font-size='12000'></span> <span font-size='10000'>{device_alias}</span>",
+        "format-connected-battery": "<span font-size='12000'></span> <span font-size='10000'>{device_alias} {device_battery_percentage}%</span>",
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "on-click": "ags toggle Bluetooth"
+    },
+
+    "network#wifi": {
+        "interface":"wlan0",
+        "format-wifi": "<span font-size='12000'>\uf1eb</span>   <span font-size='10000'>{essid}</span>",
+        "format-disconnected": "\udb82\udd2d",
+        "on-click": "ags toggle Wifi"
+    },
+    "network#eth": {
+        "interface":"enp8s0",
+        "format-wifi": "<span font-size='12000'>\udb81\udef3</span>",
+        "format-disconnected": "\udb83\udc9b",
+        "on-click": "ags toggle Ethernet"
     },
 
     "battery": {
-        "format": "{capacity}%",
-        "format-charging": "{capacity}%+",
+        "format": "<span font-size='12000'>{icon}</span>   <span font-size='10000'>{capacity}%</span>",
+        "format-charging": "<span font-size='12000'>\udb80\udc84</span>   <span font-size='10000'>{capacity}%</span>",
         "format-warning": "{capacity}%!",
+        "format-icons":["\udb80\udc7a","\udb80\udc7b","\udb80\udc7c","\udb80\udc7d","\udb80\udc7e","\udb80\udc7f","\udb80\udc80","\udb80\udc81","\udb80\udc82","\udb80\udc79"],
         "interval": 30
-    },
-
-    "clock": {
-        "format": "{:%H:%M}",
-        "format-alt": "{:%Y-%m-%d}",
-        "interval": 30
-    },
-
-    "tray": {
-        "spacing": 8
     }
 }

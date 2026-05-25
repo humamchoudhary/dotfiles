@@ -1,0 +1,365 @@
+# =========================================================
+# WALKER CONFIG
+# =========================================================
+
+theme = "default"
+
+as_window = false
+
+force_keyboard_focus = true
+close_when_open = true
+click_to_close = true
+
+selection_wrap = true
+disable_mouse = false
+
+debug = false
+
+# exact search prefix
+exact_search_prefix = "'"
+
+# argument passing
+global_argument_delimiter = "#"
+
+# =========================================================
+# SHELL
+# =========================================================
+
+[shell]
+anchor_top = true
+anchor_bottom = true
+anchor_left = true
+anchor_right = true
+
+# =========================================================
+# PLACEHOLDERS
+# =========================================================
+
+[placeholders]
+
+"default" = { input = "Search", list = "No Results" }
+
+"desktopapplications" = { input = "Launch Application", list = "No Applications Found" }
+
+"runner" = { input = "Run Command", list = "No Commands Found" }
+
+"files" = { input = "Find Files", list = "No Files Found" }
+
+"clipboard" = { input = "Clipboard History", list = "Clipboard Empty" }
+
+"calc" = { input = "Calculator", list = "Enter Expression" }
+
+"symbols" = { input = "Search Symbols", list = "No Symbols Found" }
+
+"unicode" = { input = "Unicode Characters", list = "No Unicode Characters Found" }
+
+"todo" = { input = "Todo List", list = "No Todos" }
+
+"websearch" = { input = "Search The Web", list = "No Search Engines" }
+
+"providerlist" = { input = "Providers", list = "No Providers" }
+
+"bluetooth" = { input = "Bluetooth Devices", list = "No Devices" }
+
+"archlinuxpkgs" = { input = "Arch Packages", list = "No Packages Found" }
+
+# =========================================================
+# KEYBINDS
+# =========================================================
+
+[keybinds]
+
+close = ["Escape"]
+
+next = ["Down", "ctrl j"]
+previous = ["Up", "ctrl k"]
+
+toggle_exact = ["ctrl e"]
+
+resume_last_query = ["ctrl r"]
+
+quick_activate = [
+  "F1",
+  "F2",
+  "F3",
+  "F4",
+  "F5",
+  "F6",
+  "F7",
+  "F8",
+  "F9"
+]
+
+# =========================================================
+# PROVIDERS
+# =========================================================
+
+[providers]
+
+default = [
+  "desktopapplications",
+  "runner",
+  "calc",
+  "files",
+  "clipboard",
+  "websearch",
+  "symbols",
+  "unicode",
+  "todo",
+  "bluetooth",
+  "archlinuxpkgs"
+]
+
+empty = [
+  "desktopapplications",
+]
+
+max_results = 60
+
+# =========================================================
+# PROVIDER SETS
+# =========================================================
+
+[providers.sets.apps]
+default = [
+  "desktopapplications",
+  "runner"
+]
+empty = [
+  "desktopapplications"
+]
+
+[providers.sets.work]
+default = [
+  "files",
+  "runner",
+  "desktopapplications",
+  "clipboard"
+]
+empty = [
+  "files"
+]
+
+[providers.sets.system]
+default = [
+  "bluetooth",
+  "runner",
+  "archlinuxpkgs"
+]
+empty = [
+  "bluetooth"
+]
+
+[providers.sets.search]
+default = [
+  "websearch",
+  "files",
+  "desktopapplications"
+]
+empty = [
+  "websearch"
+]
+
+# =========================================================
+# MAX RESULTS PER PROVIDER
+# =========================================================
+
+[providers.max_results_provider]
+
+desktopapplications = 20
+runner = 20
+files = 40
+clipboard = 25
+calc = 5
+websearch = 10
+symbols = 20
+unicode = 20
+todo = 20
+bluetooth = 15
+archlinuxpkgs = 20
+
+# =========================================================
+# PREFIXES
+# =========================================================
+
+[[providers.prefixes]]
+prefix = ";"
+provider = "providerlist"
+
+[[providers.prefixes]]
+prefix = ">"
+provider = "runner"
+
+[[providers.prefixes]]
+prefix = "/"
+provider = "files"
+
+[[providers.prefixes]]
+prefix = "="
+provider = "calc"
+
+[[providers.prefixes]]
+prefix = "@"
+provider = "websearch"
+
+[[providers.prefixes]]
+prefix = ":"
+provider = "clipboard"
+
+[[providers.prefixes]]
+prefix = "."
+provider = "symbols"
+
+[[providers.prefixes]]
+prefix = "u"
+provider = "unicode"
+
+[[providers.prefixes]]
+prefix = "!"
+provider = "todo"
+
+[[providers.prefixes]]
+prefix = "b"
+provider = "bluetooth"
+
+[[providers.prefixes]]
+prefix = "y"
+provider = "archlinuxpkgs"
+
+# =========================================================
+# PROVIDER CONFIGS
+# =========================================================
+
+[providers.clipboard]
+time_format = "%d.%m.%Y - %H:%M"
+
+# =========================================================
+# ACTIONS
+# =========================================================
+
+[providers.actions]
+
+# ---------------------------------------------------------
+# fallback
+# ---------------------------------------------------------
+
+fallback = [
+  { action = "menus:open", label = "open", after = "Nothing" },
+  { action = "erase_history", label = "clear history", bind = "ctrl h", after = "AsyncReload" }
+]
+
+# ---------------------------------------------------------
+# providerlist
+# ---------------------------------------------------------
+
+providerlist = [
+  { action = "activate", default = true, bind = "Return", after = "ClearReload" }
+]
+
+# ---------------------------------------------------------
+# desktopapplications
+# ---------------------------------------------------------
+
+desktopapplications = [
+  { action = "run", default = true, bind = "Return", after = "Close" },
+  { action = "run_keep_open", bind = "shift Return", after = "KeepOpen" },
+  { action = "pin", bind = "ctrl p", after = "Reload" },
+  { action = "unpin", bind = "ctrl shift p", after = "Reload" }
+]
+
+# ---------------------------------------------------------
+# runner
+# ---------------------------------------------------------
+
+runner = [
+  { action = "run", default = true, bind = "Return", after = "Close" },
+  { action = "runterminal", label = "run in terminal", bind = "shift Return", after = "Close" }
+]
+
+# ---------------------------------------------------------
+# files
+# ---------------------------------------------------------
+
+files = [
+  { action = "open", default = true, bind = "Return", after = "Close" },
+  { action = "open_dir", bind = "ctrl Return", after = "Close" },
+  { action = "copy_path", bind = "ctrl c", after = "KeepOpen" }
+]
+
+# ---------------------------------------------------------
+# websearch
+# ---------------------------------------------------------
+
+[providers.websearch]
+browser = "firefox"
+
+websearch = [
+  { action = "search", default = true, bind = "Return", after = "Close" }
+]
+
+# ---------------------------------------------------------
+# calc
+# ---------------------------------------------------------
+
+calc = [
+  { action = "copy", default = true, bind = "Return", after = "Close" }
+]
+
+# ---------------------------------------------------------
+# symbols
+# ---------------------------------------------------------
+
+symbols = [
+  { action = "run_cmd", label = "copy", default = true, bind = "Return", after = "Close" }
+]
+
+# ---------------------------------------------------------
+# unicode
+# ---------------------------------------------------------
+
+unicode = [
+  { action = "run_cmd", label = "copy", default = true, bind = "Return", after = "Close" }
+]
+
+# ---------------------------------------------------------
+# clipboard
+# ---------------------------------------------------------
+
+clipboard = [
+  { action = "copy", default = true, bind = "Return", after = "Close" },
+  { action = "remove", bind = "ctrl d", after = "Reload" },
+  { action = "remove_all", global = true, bind = "ctrl shift d", after = "Reload" },
+  { action = "toggle_images", global = true, bind = "ctrl i", after = "Reload" },
+  { action = "edit", bind = "ctrl o", after = "KeepOpen" }
+]
+
+# ---------------------------------------------------------
+# todo
+# ---------------------------------------------------------
+
+todo = [
+  { action = "toggle", default = true, bind = "Return", after = "Reload" },
+  { action = "delete", bind = "ctrl d", after = "Reload" }
+]
+
+# ---------------------------------------------------------
+# bluetooth
+# ---------------------------------------------------------
+
+bluetooth = [
+  { action = "connect", default = true, bind = "Return", after = "Reload" },
+  { action = "disconnect", bind = "ctrl d", after = "Reload" },
+  { action = "trust", bind = "ctrl t", after = "Reload" },
+  { action = "untrust", bind = "ctrl u", after = "Reload" },
+  { action = "find", global = true, bind = "ctrl f", after = "AsyncReload" }
+]
+
+# ---------------------------------------------------------
+# archlinuxpkgs
+# ---------------------------------------------------------
+
+archlinuxpkgs = [
+  { action = "install", default = true, bind = "Return", after = "Close" },
+  { action = "info", bind = "ctrl i", after = "KeepOpen" }
+]
+

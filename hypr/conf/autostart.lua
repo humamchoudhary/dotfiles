@@ -1,0 +1,39 @@
+-- # ── Wallpaper ─────────────────────────────────────────────────────────────────
+-- exec-once = swww-daemon
+hl.on("hyprland.start", function () 
+  hl.exec_cmd("swww-daemon --format xrgb &")
+  hl.exec_cmd("swaync")
+  hl.exec_cmd("nm-applet")
+  hl.exec_cmd("waybar") -- Execute waybar, hyprpaper, firefox
+  hl.exec_cmd("elephant")
+  hl.exec_cmd("walker --gapplication-service") -- Execute waybar, hyprpaper, firefox
+  -- hl.exec_cmd("hyprlauncher -d")
+  hl.exec_cmd("ags run ~/.config/waybar/widgets/init.tsx")
+end)
+--
+-- # ── Bar ───────────────────────────────────────────────────────────────────────
+-- exec-once = waybar
+--
+-- # ── Notifications ─────────────────────────────────────────────────────────────
+-- exec-once = dunst
+--
+-- # ── Idle & Lock ───────────────────────────────────────────────────────────────
+-- exec-once = hypridle
+--
+-- # ── Clipboard ─────────────────────────────────────────────────────────────────
+-- exec-once = wl-paste --type text --watch cliphist store
+-- exec-once = wl-paste --type image --watch cliphist store
+--
+-- # ── Auth agent ────────────────────────────────────────────────────────────────
+-- exec-once = /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+--
+-- # ── Network & Bluetooth tray ──────────────────────────────────────────────────
+-- exec-once = nm-applet --indicator
+-- exec-once = blueman-applet
+--
+-- # ── XDG portals ───────────────────────────────────────────────────────────────
+-- exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+-- exec-once = systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+--
+-- # ── Wallpaper (initial set) ───────────────────────────────────────────────────
+-- exec-once = ~/.config/hypr/scripts/wallpaper.sh

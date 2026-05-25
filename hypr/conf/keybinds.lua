@@ -1,0 +1,104 @@
+-- ── Legend ─────────────────────────────────────────────────────────────────────
+-- SUPER          = window action (same workspace)
+-- ALT            = workspace action
+-- SUPER + ALT    = window action (across workspaces/monitors)
+-- CTRL           = focus (same workspace)
+-- ALT + CTRL     = focus (across workspaces)
+-- Modifier order in code: SUPER > ALT > CTRL
+
+-- ── Apps ───────────────────────────────────────────────────────────────────────
+hl.bind("SUPER + Return", hl.dsp.exec_cmd("kitty"),         { description = "Open Terminal" })
+hl.bind("SUPER + e",      hl.dsp.exec_cmd("spf"),           { description = "Open SPF" })
+hl.bind("SUPER + x",      hl.dsp.exec_cmd("walker"),  { description = "Open HyprLauncher" })
+hl.bind("SUPER + v",      hl.dsp.exec_cmd("walker -m clipboard"),           { description = "Open SPF" })
+hl.bind("SUPER + w",      hl.dsp.exec_cmd("walker -m websearch"),           { description = "Open SPF" })
+hl.bind("SUPER + equal",      hl.dsp.exec_cmd("walker -m calc"),           { description = "Open SPF" })
+hl.bind("SUPER + t",      hl.dsp.exec_cmd("walker -m todo"),           { description = "Open SPF" })
+hl.bind("SUPER + r", hl.dsp.exec_cmd("~/.config/hypr/scripts/reload.sh"))
+
+
+-- ── Window actions ─────────────────────────────────────────────────────────────
+hl.bind("SUPER + q", hl.dsp.window.close(), { description = "Kill active window" })
+
+hl.bind("SUPER + f", function()
+    hl.dispatch(hl.dsp.window.fullscreen({ action = "toggle" }))
+end, { description = "Toggle Fullscreen" })
+
+hl.bind("SUPER + SHIFT + f", function()
+    hl.dispatch(hl.dsp.window.float({ action = "toggle" }))
+end, { description = "Toggle Float" })
+
+hl.bind("SUPER + c", hl.dsp.window.center(), { description = "Center window" })
+hl.bind("SUPER + p", hl.dsp.window.pin(),    { description = "Pin window" })
+
+hl.bind("ALT + Tab", function()
+    local active = hl.get_active_window()
+    local was_fullscreen = active and active.fullscreen ~= 0
+    hl.dispatch(hl.dsp.window.cycle_next())
+    hl.dispatch(hl.dsp.window.bring_to_top())
+    if was_fullscreen then
+        hl.dispatch(hl.dsp.window.fullscreen({ mode = "fullscreen" }))
+    end
+end, { description = "Cycle windows" })
+
+hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true, description = "Drag window" })
+
+-- ── Window movement (same workspace) ───────────────────────────────────────────
+local directions = {
+    l = { "A", "LEFT" },
+    r = { "D", "RIGHT" },
+    u = { "W", "UP" },
+    d = { "S", "DOWN" },
+}
+
+for dir, keys in pairs(directions) do
+    hl.bind("SUPER + " .. keys[1], hl.dsp.window.move({ direction = dir }), { description = "Move window " .. dir })
+    hl.bind("SUPER + " .. keys[2], hl.dsp.window.move({ direction = dir }), { description = "Move window " .. dir })
+
+    -- ── Window movement (across monitors) ──────────────────────────────────────
+    hl.bind("SUPER + ALT +" .. keys[1], hl.dsp.window.move({ monitor = dir }), { description = "Move window to monitor " .. dir })
+    hl.bind("SUPER + ALT + " .. keys[2], hl.dsp.window.move({ monitor = dir }), { description = "Move window to monitor " .. dir })
+
+    -- ── Focus (same workspace) ─────────────────────────────────────────────────
+    -- hl.bind("CTRL + " .. keys[1], hl.dsp.focus({ direction = dir }), { description = "Focus window " .. dir })
+    -- hl.bind("CTRL + " .. keys[2], hl.dsp.focus({ direction = dir }), { description = "Focus window " .. dir })
+end
+
+-- ── Workspace actions ──────────────────────────────────────────────────────────
+hl.bind("ALT + d",     hl.dsp.focus({ workspace = "+1" }), { description = "Next workspace" })
+hl.bind("ALT + a",     hl.dsp.focus({ workspace = "-1" }), { description = "Prev workspace" })
+hl.bind("ALT + RIGHT", hl.dsp.focus({ workspace = "+1" }), { description = "Next workspace" })
+hl.bind("ALT + LEFT",  hl.dsp.focus({ workspace = "-1" }), { description = "Prev workspace" })
+
+hl.bind("SUPER + TAB", hl.dsp.workspace.swap_monitors({ monitor1 = 0, monitor2 = 1 }), { description = "Swap monitors" })
+
+hl.bind("ALT + b", hl.dsp.workspace.toggle_special("bg"), { description = "Toggle bg scratchpad" })
+
+for i = 1, 10 do
+    local key = i == 10 and "0" or tostring(i)
+    -- switch to workspace
+    hl.bind("ALT + " .. key, hl.dsp.focus({ workspace = i }), { description = "Switch to workspace " .. i })
+    -- move window to workspace and follow
+    hl.bind("SUPER +  " .. key, hl.dsp.window.move({ workspace = i }), { description = "Move window to workspace " .. i })
+    -- send window to workspace silently
+    hl.bind("SUPER +  SHIFT + " .. key, hl.dsp.window.move({ workspace = i, follow = false }), { description = "Send window to workspace " .. i })
+end
+
+-- send window to bg scratchpad
+hl.bind("SUPER + b", hl.dsp.window.move({ workspace = "special:bg" }), { description = "Send window to bg scratchpad" })
+
+-- ── System ─────────────────────────────────────────────────────────────────────
+hl.bind("SUPER + ALT + l", hl.dsp.exec_cmd("hyprlock"), { description = "Lock screen" })
+
+-- ── Media ──────────────────────────────────────────────────────────────────────
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"), { repeating = true })
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),        { locked = true })
+hl.bind("SUPER + XF86AudioNext", hl.dsp.exec_cmd("playerctl next"),          { long_press = true })
+hl.bind("SUPER + XF86AudioNext", hl.dsp.exec_cmd("playerctl position +5"))
+hl.bind("XF86MonBrightnessUp",   hl.dsp.exec_cmd("brightnessctl set 5%+"),   { repeating = true })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 5%-"),   { repeating = true })
+hl.bind("XF86AudioPlay",          hl.dsp.exec_cmd("playerctl play-pause"),   { locked = true })
+hl.bind("XF86AudioNext",          hl.dsp.exec_cmd("playerctl next"),         { locked = true })
+hl.bind("XF86AudioPrev",          hl.dsp.exec_cmd("playerctl previous"),     { locked = true })
+
+hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
