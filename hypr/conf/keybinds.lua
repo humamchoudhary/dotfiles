@@ -88,7 +88,8 @@ end
 hl.bind("SUPER + b", hl.dsp.window.move({ workspace = "special:bg" }), { description = "Send window to bg scratchpad" })
 
 -- ── System ─────────────────────────────────────────────────────────────────────
-hl.bind("SUPER + ALT + l", hl.dsp.exec_cmd("hyprlock"), { description = "Lock screen" })
+hl.bind("SUPER + ALT + l", hl.dsp.exec_cmd("hyprlock"),                                              { description = "Lock screen" })
+hl.bind("SUPER + ALT + p", hl.dsp.exec_cmd("~/.config/hypr/scripts/powermenu.sh"),                  { description = "Power menu" })
 
 -- ── Media ──────────────────────────────────────────────────────────────────────
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"), { repeating = true })
