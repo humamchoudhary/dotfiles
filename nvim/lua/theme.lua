@@ -1,0 +1,14 @@
+local p = {
+    bg      = "#020203",
+    base    = "#0d0d0f",
+    surface = "#131316",
+    overlay = "#1a1a1f",
+    border  = "#272730",
+    subtext = "#6b6b78",
+    text    = "#c8c8d4",
+    bright  = "#f0f0f5",
+    accent  = "#b57bee",
+    muted   = "#7c4db0",
+}
+
+return p
