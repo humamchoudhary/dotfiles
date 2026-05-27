@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DOTFILES="/home/testusr/dotfiles"
-CONFIG="/home/testusr/.config"
+DOTFILES="${HOME}/dotfiles"
+CONFIG="${HOME}/.config"
 
 link_file() {
     local src="$1"
