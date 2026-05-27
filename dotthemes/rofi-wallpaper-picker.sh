@@ -20,6 +20,7 @@ fi
 # match on disk rather than assuming a specific conversion.
 DIR_NAME="${CURRENT_THEME// /_}"
 THEME_DIR="$WALLPAPERS_DIR/$DIR_NAME"
+echo ${THEME_DIR}
 
 # Fallback: case-insensitive search if the direct lookup misses
 if [[ ! -d "$THEME_DIR" ]]; then
@@ -45,24 +46,18 @@ selected=$(
            -p "" \
            -mesg "$CURRENT_THEME" \
            -show-icons \
-           -theme-str '
-               window    { width: 900px; border-radius: 12px; }
-               listview  { columns: 4; lines: 3; spacing: 8px; padding: 8px; }
-               element   { orientation: vertical; border-radius: 8px; padding: 4px; }
-               element-icon { size: 180px; }
-               element-text { horizontal-align: 0.5; padding: 4px 0 0 0; }
-           ' \
+           -theme "$HOME/.config/rofi/wallpaper-picker.rasi" \
     | head -n1
 )
 
 [[ -z "$selected" ]] && exit 0
 
 WALL_PATH="$THEME_DIR/$selected"
-
+echo ${WALL_PATH}
 if [[ ! -f "$WALL_PATH" ]]; then
     notify-send "Wallpaper Picker" "File not found: $selected"
     exit 1
 fi
 
-swww img "$WALL_PATH" --transition-type fade --transition-duration 1
+awww img "$WALL_PATH" --transition-type fade --transition-duration 1
 echo "$WALL_PATH" > "$WALLPAPER_CACHE"

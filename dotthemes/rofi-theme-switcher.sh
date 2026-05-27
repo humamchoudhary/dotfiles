@@ -164,7 +164,7 @@ if [[ -n "$THEME_WALL_DIR" && -d "$THEME_WALL_DIR" ]]; then
            -o -iname '*.webp' -o -iname '*.bmp' \))
     if [[ ${#walls[@]} -gt 0 ]]; then
         WALL="${walls[RANDOM % ${#walls[@]}]}"
-        swww img "$WALL" --transition-type fade --transition-duration 1
+        awww img "$WALL" --transition-type fade --transition-duration 1
         echo "$WALL" > "$WALLPAPER_CACHE"
         notify-send "Theme" "$THEME" -h string:x-canonical-private-synchronous:theme 2>/dev/null
         exit 0

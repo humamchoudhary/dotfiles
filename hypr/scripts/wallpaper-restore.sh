@@ -1,15 +1,15 @@
 #!/bin/bash
 # Restores the cached wallpaper on Hyprland startup.
-# Run once after swww-daemon starts; falls back gracefully through several options.
+# Run once after awww-daemon starts; falls back gracefully through several options.
 
 STATE_DIR="$HOME/.config/hypr/state"
 WALLPAPER_CACHE="$STATE_DIR/wallpaper"
 THEME_CACHE="$STATE_DIR/theme"
 WALLPAPERS_DIR="$HOME/wallpapers"
 
-# Wait for swww-daemon to be ready (up to 10 s)
+# Wait for awww-daemon to be ready (up to 10 s)
 for _ in $(seq 1 20); do
-    swww query &>/dev/null && break
+    awww query &>/dev/null && break
     sleep 0.5
 done
 
@@ -27,7 +27,7 @@ fi
 if [[ -f "$WALLPAPER_CACHE" ]]; then
     WALL=$(cat "$WALLPAPER_CACHE")
     if [[ -f "$WALL" ]]; then
-        swww img "$WALL" --transition-type none
+        awww img "$WALL" --transition-type none
         exit 0
     fi
 fi
@@ -46,7 +46,7 @@ if [[ -f "$THEME_CACHE" ]]; then
                -o -iname '*.webp' -o -iname '*.bmp' \))
         if [[ ${#walls[@]} -gt 0 ]]; then
             WALL="${walls[RANDOM % ${#walls[@]}]}"
-            swww img "$WALL" --transition-type none
+            awww img "$WALL" --transition-type none
             echo "$WALL" > "$WALLPAPER_CACHE"
             exit 0
         fi
@@ -61,4 +61,4 @@ if [[ ! -f "$WALL" ]]; then
     convert -size 1920x1080 xc:black "$WALL" 2>/dev/null || \
         magick  -size 1920x1080 xc:black "$WALL" 2>/dev/null || true
 fi
-swww img "$WALL" --transition-type none
+awww img "$WALL" --transition-type none

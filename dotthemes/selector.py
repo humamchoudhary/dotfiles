@@ -1,6 +1,6 @@
 """
 Wallpaper Selector
-Pick a theme, browse wallpapers with q/e, apply with swww as you go
+Pick a theme, browse wallpapers with q/e, apply with awww as you go
 """
 
 import sys
@@ -51,17 +51,17 @@ def getch() -> str:
 def set_wallpaper(path: Path):
     try:
         subprocess.run(
-            ["swww", "img", str(path),
+            ["awww", "img", str(path),
              "--transition-type", "fade",
              "--transition-duration", "1"],
             check=True,
             capture_output=True,
         )
     except FileNotFoundError:
-        print("\n❌ swww not found. Is it installed and in PATH?")
+        print("\n❌ awww not found. Is it installed and in PATH?")
         sys.exit(1)
     except subprocess.CalledProcessError as e:
-        print(f"\n❌ swww error: {e.stderr.decode().strip()}")
+        print(f"\n❌ awww error: {e.stderr.decode().strip()}")
 
 
 def pick_theme(themes: list[Path]) -> Path:
@@ -117,7 +117,7 @@ def browse(wallpapers: list[Path]):
 def main():
     import argparse
 
-    parser = argparse.ArgumentParser(description="Browse and set wallpapers by theme using swww")
+    parser = argparse.ArgumentParser(description="Browse and set wallpapers by theme using awww")
     parser.add_argument("-d", "--dir", default="wallpapers",
                         help="Base wallpapers directory (default: wallpapers)")
     args = parser.parse_args()
@@ -126,7 +126,7 @@ def main():
     WALLPAPERS_DIR = Path(args.dir)
 
     print("╔══════════════════════════════════╗")
-    print("║      swww wallpaper selector     ║")
+    print("║      awww wallpaper selector     ║")
     print("╚══════════════════════════════════╝")
 
     themes = get_themes()

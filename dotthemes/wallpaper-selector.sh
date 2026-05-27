@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Wallpaper selector using rofi + swww
+# Wallpaper selector using rofi + awww
 
 WALLPAPERS_DIR="${1:-$HOME/wallpapers}"
 
@@ -46,6 +46,6 @@ wallpaper=$(
 [[ -z "$wallpaper" ]] && exit 0
 
 # ── apply ─────────────────────────────────────────────────────────────────────
-swww img "$THEME_DIR/$wallpaper" \
+awww img "$THEME_DIR/$wallpaper" \
   --transition-type fade \
   --transition-duration 1

@@ -1,0 +1,99 @@
+@theme "/dev/null"
+@import "colors.rasi"
+
+window {
+    background-color: @bg;
+    border:           1px solid;
+    border-color:     @border-col;
+    border-radius:    12px;
+    padding:          10px;
+    width:            900px;
+}
+
+mainbox {
+    background-color: transparent;
+    spacing:          8px;
+    children:         [inputbar, message, listview];
+}
+
+inputbar {
+    background-color: @bg-alt;
+    border-radius:    8px;
+    padding:          8px 12px;
+    spacing:          8px;
+    children:         [prompt, entry];
+}
+
+prompt {
+    background-color: transparent;
+    text-color:       @accent;
+    vertical-align:   0.5;
+}
+
+entry {
+    background-color: transparent;
+    text-color:       @fg-bright;
+    placeholder:      "filter…";
+    placeholder-color: @fg;
+    vertical-align:   0.5;
+}
+
+message {
+    background-color: @bg-alt;
+    border-radius:    8px;
+    padding:          4px 12px;
+}
+
+textbox {
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+listview {
+    background-color: transparent;
+    columns:          4;
+    lines:            3;
+    spacing:          8px;
+    padding:          4px;
+    scrollbar:        true;
+    fixed-height:     true;
+}
+
+scrollbar {
+    background-color: @bg-alt;
+    handle-color:     @accent-dim;
+    handle-width:     4px;
+    border:           0;
+    border-radius:    2px;
+    width:            4px;
+}
+
+element {
+    background-color: transparent;
+    orientation:      vertical;
+    border-radius:    8px;
+    padding:          4px;
+    cursor:           pointer;
+}
+
+element selected {
+    background-color: @accent-dim;
+    border:           1px solid;
+    border-color:     @accent;
+}
+
+element-icon {
+    background-color: transparent;
+    size:             180px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       @fg;
+    horizontal-align: 0.5;
+    padding:          4px 0 0 0;
+}
+
+element-text selected {
+    text-color: @fg-bright;
+}

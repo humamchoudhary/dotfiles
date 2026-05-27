@@ -1,7 +1,7 @@
 -- # ── Wallpaper ─────────────────────────────────────────────────────────────────
--- exec-once = swww-daemon
+-- exec-once = awww-daemon
 hl.on("hyprland.start", function ()
-  hl.exec_cmd("swww-daemon --format xrgb &")
+  hl.exec_cmd("awww-daemon --format xrgb &")
   hl.exec_cmd("~/.config/hypr/scripts/wallpaper-restore.sh &")
   hl.exec_cmd("swaync")
   hl.exec_cmd("nm-applet")
