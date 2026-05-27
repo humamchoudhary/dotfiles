@@ -90,6 +90,8 @@ hl.bind("SUPER + b", hl.dsp.window.move({ workspace = "special:bg" }), { descrip
 -- ── System ─────────────────────────────────────────────────────────────────────
 hl.bind("SUPER + ALT + l", hl.dsp.exec_cmd("hyprlock"),                                              { description = "Lock screen" })
 hl.bind("SUPER + ALT + p", hl.dsp.exec_cmd("~/.config/hypr/scripts/powermenu.sh"),                  { description = "Power menu" })
+hl.bind("SUPER + ALT + t", hl.dsp.exec_cmd("~/.config/dotthemes/rofi-theme-switcher.sh"),           { description = "Theme switcher" })
+hl.bind("SUPER + ALT + w", hl.dsp.exec_cmd("~/.config/dotthemes/rofi-wallpaper-picker.sh"),         { description = "Wallpaper picker" })
 
 -- ── Media ──────────────────────────────────────────────────────────────────────
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"), { repeating = true })
