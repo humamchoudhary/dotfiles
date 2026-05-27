@@ -1,13 +1,13 @@
 -- # ── Wallpaper ─────────────────────────────────────────────────────────────────
 -- exec-once = swww-daemon
-hl.on("hyprland.start", function () 
+hl.on("hyprland.start", function ()
   hl.exec_cmd("swww-daemon --format xrgb &")
+  hl.exec_cmd("~/.config/hypr/scripts/wallpaper-restore.sh &")
   hl.exec_cmd("swaync")
   hl.exec_cmd("nm-applet")
-  hl.exec_cmd("waybar") -- Execute waybar, hyprpaper, firefox
+  hl.exec_cmd("waybar")
   hl.exec_cmd("elephant")
-  hl.exec_cmd("walker --gapplication-service") -- Execute waybar, hyprpaper, firefox
-  -- hl.exec_cmd("hyprlauncher -d")
+  hl.exec_cmd("walker --gapplication-service")
   hl.exec_cmd("ags run ~/.config/waybar/widgets/init.tsx")
 end)
 --
