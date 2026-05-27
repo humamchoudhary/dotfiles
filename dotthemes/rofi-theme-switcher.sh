@@ -36,13 +36,11 @@ if [[ -n "$1" ]]; then
     THEME="$1"
 else
     THEME=$(printf '%s\n' "${NAMES[@]}" | rofi -dmenu \
-        -p "" \
-        -mesg "Select a color theme" \
-        -theme-str '
-            window    { width: 520px; border-radius: 12px; }
-            listview  { lines: 14; }
-            element   { padding: 8px 14px; }
-        ')
+        -matching fuzzy \
+        -sort \
+        -sorting-method fzf \
+        -p "󰔏 " \
+        -theme "$HOME/.config/rofi/theme-picker.rasi")
 fi
 
 [[ -z "$THEME" ]] && exit 0
@@ -156,8 +154,11 @@ echo "$muted"   > "$STATE_DIR/accent_dim"
 # ── Set random wallpaper from theme directory ───────────────────────────────────
 DIR_NAME="${THEME// /_}"
 THEME_WALL_DIR="$WALLPAPERS_DIR/$DIR_NAME"
+# Case-insensitive fallback if direct lookup misses
+[[ ! -d "$THEME_WALL_DIR" ]] && \
+    THEME_WALL_DIR=$(find "$WALLPAPERS_DIR" -maxdepth 1 -type d -iname "$DIR_NAME" | head -1)
 
-if [[ -d "$THEME_WALL_DIR" ]]; then
+if [[ -n "$THEME_WALL_DIR" && -d "$THEME_WALL_DIR" ]]; then
     mapfile -t walls < <(find "$THEME_WALL_DIR" -maxdepth 1 -type f \
         \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \
            -o -iname '*.webp' -o -iname '*.bmp' \))
