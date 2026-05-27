@@ -37,7 +37,10 @@ if [[ -f "$THEME_CACHE" ]]; then
     THEME=$(cat "$THEME_CACHE")
     DIR_NAME="${THEME// /_}"
     THEME_DIR="$WALLPAPERS_DIR/$DIR_NAME"
-    if [[ -d "$THEME_DIR" ]]; then
+    # Case-insensitive fallback if direct lookup misses
+    [[ ! -d "$THEME_DIR" ]] && \
+        THEME_DIR=$(find "$WALLPAPERS_DIR" -maxdepth 1 -type d -iname "$DIR_NAME" | head -1)
+    if [[ -n "$THEME_DIR" && -d "$THEME_DIR" ]]; then
         mapfile -t walls < <(find "$THEME_DIR" -maxdepth 1 -type f \
             \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \
                -o -iname '*.webp' -o -iname '*.bmp' \))

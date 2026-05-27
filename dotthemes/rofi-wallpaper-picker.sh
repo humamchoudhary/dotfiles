@@ -15,10 +15,18 @@ else
     CURRENT_THEME="Neon Purple"
 fi
 
+# Resolve the wallpaper directory from the filesystem using underscore names.
+# Folder names use spaces-replaced-with-underscores, so we look for an exact
+# match on disk rather than assuming a specific conversion.
 DIR_NAME="${CURRENT_THEME// /_}"
 THEME_DIR="$WALLPAPERS_DIR/$DIR_NAME"
 
+# Fallback: case-insensitive search if the direct lookup misses
 if [[ ! -d "$THEME_DIR" ]]; then
+    THEME_DIR=$(find "$WALLPAPERS_DIR" -maxdepth 1 -type d -iname "$DIR_NAME" | head -1)
+fi
+
+if [[ -z "$THEME_DIR" || ! -d "$THEME_DIR" ]]; then
     notify-send "Wallpaper Picker" "No wallpaper directory for theme: $CURRENT_THEME"
     exit 1
 fi
@@ -33,6 +41,7 @@ selected=$(
         printf '%s\000icon\037%s\n' "$(basename "$path")" "$path"
     done \
     | rofi -dmenu \
+           -matching fuzzy \
            -p "" \
            -mesg "$CURRENT_THEME" \
            -show-icons \
