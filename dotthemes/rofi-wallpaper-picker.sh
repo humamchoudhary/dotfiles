@@ -5,6 +5,7 @@ WALLPAPERS_DIR="${1:-$HOME/wallpapers}"
 STATE_DIR="$HOME/.config/hypr/state"
 THEME_CACHE="$STATE_DIR/theme"
 WALLPAPER_CACHE="$STATE_DIR/wallpaper"
+LOCAL_CACHE_DIR="$HOME/.cache/hypr/wallpapers"
 
 mkdir -p "$STATE_DIR"
 
@@ -60,4 +61,9 @@ if [[ ! -f "$WALL_PATH" ]]; then
 fi
 
 awww img "$WALL_PATH" --transition-type fade --transition-duration 1
-echo "$WALL_PATH" > "$WALLPAPER_CACHE"
+
+# Cache a local copy so the wallpaper works offline (e.g. remote server unavailable)
+mkdir -p "$LOCAL_CACHE_DIR"
+CACHED_WALL="$LOCAL_CACHE_DIR/${DIR_NAME}_$(basename "$WALL_PATH")"
+cp -- "$WALL_PATH" "$CACHED_WALL"
+echo "$CACHED_WALL" > "$WALLPAPER_CACHE"

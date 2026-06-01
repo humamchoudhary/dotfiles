@@ -6,6 +6,7 @@ STATE_DIR="$HOME/.config/hypr/state"
 WALLPAPER_CACHE="$STATE_DIR/wallpaper"
 THEME_CACHE="$STATE_DIR/theme"
 WALLPAPERS_DIR="$HOME/wallpapers"
+LOCAL_CACHE_DIR="$HOME/.cache/hypr/wallpapers"
 
 # Wait for awww-daemon to be ready (up to 10 s)
 for _ in $(seq 1 20); do
@@ -47,7 +48,11 @@ if [[ -f "$THEME_CACHE" ]]; then
         if [[ ${#walls[@]} -gt 0 ]]; then
             WALL="${walls[RANDOM % ${#walls[@]}]}"
             awww img "$WALL" --transition-type none
-            echo "$WALL" > "$WALLPAPER_CACHE"
+            # Cache a local copy so the wallpaper works offline
+            mkdir -p "$LOCAL_CACHE_DIR"
+            CACHED_WALL="$LOCAL_CACHE_DIR/${DIR_NAME}_$(basename "$WALL")"
+            cp -- "$WALL" "$CACHED_WALL"
+            echo "$CACHED_WALL" > "$WALLPAPER_CACHE"
             exit 0
         fi
     fi

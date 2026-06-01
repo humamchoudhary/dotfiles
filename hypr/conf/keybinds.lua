@@ -9,11 +9,9 @@
 -- ── Apps ───────────────────────────────────────────────────────────────────────
 hl.bind("SUPER + Return", hl.dsp.exec_cmd("kitty"),         { description = "Open Terminal" })
 hl.bind("SUPER + e",      hl.dsp.exec_cmd("spf"),           { description = "Open SPF" })
-hl.bind("SUPER + x",      hl.dsp.exec_cmd("walker"),  { description = "Open HyprLauncher" })
-hl.bind("SUPER + v",      hl.dsp.exec_cmd("walker -m clipboard"),           { description = "Open SPF" })
-hl.bind("SUPER + w",      hl.dsp.exec_cmd("walker -m websearch"),           { description = "Open SPF" })
-hl.bind("SUPER + equal",      hl.dsp.exec_cmd("walker -m calc"),           { description = "Open SPF" })
-hl.bind("SUPER + t",      hl.dsp.exec_cmd("walker -m todo"),           { description = "Open SPF" })
+hl.bind("SUPER + x",      hl.dsp.exec_cmd("rofi -show drun -show-icons -icon-theme Papirus-Dark -drun-display-format '{name}' -theme ~/.config/rofi/launcher.rasi"),  { description = "App launcher" })
+hl.bind("SUPER + v",      hl.dsp.exec_cmd("bash -c 'cliphist list | rofi -dmenu -p \"󰅍 \" -theme ~/.config/rofi/clipboard.rasi | cliphist decode | wl-copy'"),  { description = "Clipboard history" })
+hl.bind("SUPER + equal", hl.dsp.exec_cmd("rofi -show calc -modi calc -no-show-match -no-sort -theme ~/.config/rofi/launcher.rasi"), { description = "Calculator" })
 hl.bind("SUPER + r", hl.dsp.exec_cmd("~/.config/hypr/scripts/reload.sh"))
 
 
