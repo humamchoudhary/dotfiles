@@ -13,7 +13,8 @@
         "format": "{id}",
         "active-only": false,
         "on-scroll-up": "hyprctl eval 'hl.dispatch(hl.dsp.focus({workspace = \"+1\"}))'",
-        "on-scroll-down": "hyprctl eval 'hl.dispatch(hl.dsp.focus({workspace = \"-1\"}))'"
+        "on-scroll-down": "hyprctl eval 'hl.dispatch(hl.dsp.focus({workspace = \"-1\"}))'",
+            "on-click": "activate"
     },
 
     "custom/launcher":{

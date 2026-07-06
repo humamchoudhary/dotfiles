@@ -7,8 +7,8 @@ chosen=$(printf "%b" "$entries" | rofi -dmenu -p "" \
     -theme "$HOME/.config/rofi/powermenu.rasi")
 
 case "$chosen" in
-    "󰌾  lock")     hyprlock ;;
-    "󰍃  logout")   hyprctl dispatch exit ;;
+    "󰌾  lock")     ~/.local/share/quickshell-lockscreen/lock.sh ;;
+    "󰍃  logout")   hyprctl dispatch 'hl.dsp.exit()';;
     "󰑓  reboot")   systemctl reboot ;;
     "󰐥  shutdown") systemctl poweroff ;;
 esac

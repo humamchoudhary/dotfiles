@@ -224,3 +224,14 @@ fi
 #[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 #eval "$(pyenv init - zsh)"
 #eval "$(pyenv virtualenv-init -)"
+
+export NVM_DIR="$HOME/.nvm"
+source /usr/share/nvm/init-nvm.sh
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+
+alias aws-eu='export AWS_PROFILE=default'
+alias aws-us='export AWS_PROFILE=se-us-east'
+
+export EXA_COLORS="di=01;38;5;15:fi=38;5;7:ln=01;38;5;11"
