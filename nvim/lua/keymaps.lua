@@ -76,10 +76,43 @@ M.setup = function()
         -- LSP keybindings group
         { "<leader>v",     group = "LSP" },
         { "<leader>vws",   function() vim.lsp.buf.workspace_symbol() end,                                  desc = "Workspace symbol" },
+        { "<leader>vs",    "<cmd>Telescope lsp_document_symbols<CR>",                                      desc = "Document symbols" },
         { "<leader>vd",    function() vim.diagnostic.open_float() end,                                     desc = "Open diagnostics" },
-        { "<leader>vca",   function() vim.lsp.buf.code_action() end,                                       desc = "Code action" },
+        { "<leader>vca",   function() vim.lsp.buf.code_action() end,                                       desc = "Code action",                       mode = { "n", "v" } },
         { "<leader>vrr",   function() vim.lsp.buf.references() end,                                        desc = "References" },
         { "<leader>vrn",   function() vim.lsp.buf.rename() end,                                            desc = "Rename" },
+        { "<leader>vh",    function() require("keymaps").toggle_inlay_hints() end,                         desc = "Toggle inlay hints" },
+        { "<leader>vi",    "<cmd>LspInfo<CR>",                                                             desc = "LSP info" },
+        { "<leader>vR",    "<cmd>LspRestart<CR>",                                                          desc = "Restart LSP" },
+
+        -- Diagnostics list (trouble.nvim)
+        { "<leader>x",     group = "Diagnostics" },
+        { "<leader>xx",    "<cmd>Trouble diagnostics toggle<CR>",                                          desc = "Workspace diagnostics" },
+        { "<leader>xb",    "<cmd>Trouble diagnostics toggle filter.buf=0<CR>",                             desc = "Buffer diagnostics" },
+        { "<leader>xs",    "<cmd>Trouble symbols toggle<CR>",                                              desc = "Symbol outline" },
+        { "<leader>xr",    "<cmd>Trouble lsp toggle<CR>",                                                  desc = "References / definitions" },
+        { "<leader>xq",    "<cmd>Trouble qflist toggle<CR>",                                               desc = "Quickfix list" },
+
+        -- ============================================================================
+        -- DEBUGGING (nvim-dap)
+        -- ============================================================================
+        { "<leader>b",     group = "Debug" },
+        { "<leader>bb",    function() require("dap").toggle_breakpoint() end,                              desc = "Toggle breakpoint" },
+        { "<leader>bB",    function() require("dap").set_breakpoint(vim.fn.input("Condition: ")) end,      desc = "Conditional breakpoint" },
+        { "<leader>bl",    function() require("dap").set_breakpoint(nil, nil, vim.fn.input("Log: ")) end,  desc = "Log point" },
+        { "<leader>bc",    function() require("dap").continue() end,                                       desc = "Continue / start" },
+        { "<leader>br",    function() require("dap").run_last() end,                                       desc = "Re-run last session" },
+        { "<leader>bt",    function() require("dap").terminate() end,                                      desc = "Terminate session" },
+        { "<leader>bu",    function() require("dapui").toggle() end,                                       desc = "Toggle debug UI" },
+        { "<leader>be",    function() require("dapui").eval(nil, { enter = true }) end,                    desc = "Evaluate expression",               mode = { "n", "v" } },
+        { "<leader>bo",    function() require("dap").repl.toggle() end,                                    desc = "Toggle REPL" },
+        { "<leader>bC",    function() require("dap").clear_breakpoints() end,                              desc = "Clear all breakpoints" },
+        -- Function keys match the VS Code defaults so muscle memory carries over.
+        { "<F5>",          function() require("dap").continue() end,                                       desc = "Debug: continue" },
+        { "<F9>",          function() require("dap").toggle_breakpoint() end,                              desc = "Debug: toggle breakpoint" },
+        { "<F10>",         function() require("dap").step_over() end,                                      desc = "Debug: step over" },
+        { "<F11>",         function() require("dap").step_into() end,                                      desc = "Debug: step into" },
+        { "<S-F11>",       function() require("dap").step_out() end,                                       desc = "Debug: step out" },
 
         -- Database (dbee)
         { "<leader>d",     group = "Database/Docs" },
@@ -146,10 +179,19 @@ M.setup = function()
         -- NON-LEADER KEYBINDINGS
         -- ============================================================================
         -- LSP
-        { "gd",            function() vim.lsp.buf.definition() end,                                        desc = "Go to definition" },
+        { "gd",            "<cmd>Telescope lsp_definitions<CR>",                                           desc = "Go to definition" },
+        { "gD",            function() vim.lsp.buf.declaration() end,                                       desc = "Go to declaration" },
+        { "gi",            "<cmd>Telescope lsp_implementations<CR>",                                       desc = "Go to implementation" },
+        { "gy",            "<cmd>Telescope lsp_type_definitions<CR>",                                      desc = "Go to type definition" },
+        { "gr",            "<cmd>Telescope lsp_references<CR>",                                            desc = "List references" },
         { "K",             function() vim.lsp.buf.hover() end,                                             desc = "Hover documentation" },
-        { "[d",            function() vim.diagnostic.goto_next() end,                                      desc = "Next diagnostic" },
-        { "]d",            function() vim.diagnostic.goto_prev() end,                                      desc = "Previous diagnostic" },
+        -- vim.diagnostic.goto_next/goto_prev were deprecated in 0.11 in favour
+        -- of jump({ count = ... }). Directions were also swapped before: `]` is
+        -- forward and `[` is backward everywhere else in vim.
+        { "]d",            function() vim.diagnostic.jump({ count = 1, float = true }) end,                desc = "Next diagnostic" },
+        { "[d",            function() vim.diagnostic.jump({ count = -1, float = true }) end,               desc = "Previous diagnostic" },
+        { "]e",            function() vim.diagnostic.jump({ count = 1, severity = vim.diagnostic.severity.ERROR, float = true }) end,  desc = "Next error" },
+        { "[e",            function() vim.diagnostic.jump({ count = -1, severity = vim.diagnostic.severity.ERROR, float = true }) end, desc = "Previous error" },
         { "<C-h>",         function() vim.lsp.buf.signature_help() end,                                    desc = "Signature help",                    mode = "i" },
 
         -- Python venv
@@ -185,6 +227,16 @@ M.setup = function()
             spacing = 3,
         },
     })
+end
+
+-- Inlay hints are enabled per-buffer but start off (see lua/lang/lsp.lua),
+-- since they shift text around while you're mid-edit.
+M.toggle_inlay_hints = function()
+    local bufnr = vim.api.nvim_get_current_buf()
+    local filter = { bufnr = bufnr }
+    local enabled = vim.lsp.inlay_hint.is_enabled(filter)
+    vim.lsp.inlay_hint.enable(not enabled, filter)
+    print("Inlay hints " .. (enabled and "off" or "on"))
 end
 
 -- Save function with feedback

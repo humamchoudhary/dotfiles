@@ -231,7 +231,84 @@ source /usr/share/nvm/init-nvm.sh
 
 
 
+#alias aws-eu='export AWS_PROFILE=default'
+#alias aws-us='export AWS_PROFILE=se-us-east'
+
 alias aws-eu='export AWS_PROFILE=default'
 alias aws-us='export AWS_PROFILE=se-us-east'
 
+aws-region() {
+  local input="$1"
+  local region=""
+
+  if [[ -z "$input" ]]; then
+    echo "Usage: aws-region <region-or-name>"
+    echo "Examples:"
+    echo "  aws-region us-east-1"
+    echo "  aws-region frankfurt"
+    echo "  aws-region eu"
+    echo "  aws-region us"
+    return 1
+  fi
+
+  case "${input:l}" in
+    # Europe
+    eu|ireland)
+      region="eu-west-1"
+      aws-eu
+      ;;
+    frankfurt|eu-central|eu-central-1)
+      region="eu-central-1"
+      aws-eu
+      ;;
+    london|eu-west-2)
+      region="eu-west-2"
+      aws-eu
+      ;;
+    paris|eu-west-3)
+      region="eu-west-3"
+      aws-eu
+      ;;
+    stockholm|eu-north-1)
+      region="eu-north-1"
+      aws-eu
+      ;;
+
+    # US
+    us|virginia|us-east|us-east-1)
+      region="us-east-1"
+      aws-us
+      ;;
+    ohio|us-east-2)
+      region="us-east-2"
+      aws-us
+      ;;
+    california|us-west|us-west-1)
+      region="us-west-1"
+      aws-us
+      ;;
+    oregon|us-west-2)
+      region="us-west-2"
+      aws-us
+      ;;
+
+    # If they pass a raw AWS region directly
+    [a-z][a-z]-[a-z]*-[0-9])
+      region="$input"
+      ;;
+    *)
+      echo "Unknown region/name: $input"
+      return 1
+      ;;
+  esac
+
+  export AWS_REGION="$region"
+  export AWS_DEFAULT_REGION="$region"
+
+  echo "AWS_PROFILE=${AWS_PROFILE}"
+  echo "AWS_REGION=${AWS_REGION}"
+}
+
 export EXA_COLORS="di=01;38;5;15:fi=38;5;7:ln=01;38;5;11"
+
+export PATH="$PATH:$(go env GOPATH)/bin"

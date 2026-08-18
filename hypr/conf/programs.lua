@@ -1,6 +1,6 @@
 
 return {
     terminal    = "kitty",
-    fileManager = "dolphin",
+    fileManager = "thunar",
     menu        = "hyprlauncher",
 }

@@ -82,28 +82,65 @@ local plugins = {
 		config = function()
 			require("nvim-treesitter").setup({ -- CHANGE: was require("nvim-treesitter")
 				ensure_installed = {
-					"c",
-					"cpp",
+					-- editor
 					"lua",
+					"luadoc",
 					"vim",
 					"vimdoc",
+					"query",
+					"regex",
+					-- c family
+					"c",
+					"cpp",
+					"cmake",
+					"make",
+					"objc",
+					-- web
 					"javascript",
+					"jsdoc",
 					"typescript",
 					"tsx",
 					"html",
 					"css",
-					"json",
-					"yaml",
+					"scss",
+					"graphql",
+					"prisma",
+					-- python
 					"python",
+					"requirements",
+					-- go
 					"go",
+					"gomod",
+					"gosum",
+					"gowork",
+					"gotmpl",
+					-- rust
 					"rust",
+					"ron",
+					-- data / config
+					"json",
+					"jsonc",
+					"json5",
+					"yaml",
+					"toml",
+					"xml",
 					"sql",
+					-- shell / infra
 					"bash",
+					"dockerfile",
+					"terraform",
+					"hcl",
+					-- docs / vcs
 					"markdown",
 					"markdown_inline",
+					"gitcommit",
+					"gitignore",
+					"git_rebase",
+					"diff",
+					-- templating
 					"htmldjango",
 					"jinja",
-				}, -- keep your existing list
+				},
 				highlight = { enable = true },
 				indent = { enable = false },
 			})
@@ -269,17 +306,19 @@ local plugins = {
 	},
 
 	{ "ThePrimeagen/harpoon", dependencies = { "nvim-lua/plenary.nvim" } },
-	{ "williamboman/mason.nvim" },
-	{ "williamboman/mason-lspconfig.nvim" },
+
+	-- ── LSP / completion stack ───────────────────────────────────────────────
+	-- Neovim 0.12 configures servers natively via vim.lsp.config, so there's no
+	-- lspconfig.setup() wrapper here; mason-lspconfig only handles installing
+	-- servers and calling vim.lsp.enable() on them. See lua/lang/lsp.lua.
+	{ "mason-org/mason.nvim", opts = {} },
+	{ "mason-org/mason-lspconfig.nvim" },
+	{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
+	{ "b0o/schemastore.nvim" },
 	{
-		"VonHeikemen/lsp-zero.nvim",
-		branch = "v3.x",
+		"hrsh7th/nvim-cmp",
 		dependencies = {
-			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
-			"neovim/nvim-lspconfig",
 			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/nvim-cmp",
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
 			"hrsh7th/cmp-calc",
@@ -287,6 +326,93 @@ local plugins = {
 			"L3MON4D3/LuaSnip",
 			"saadparwaiz1/cmp_luasnip",
 		},
+	},
+
+	-- LSP progress in the corner instead of silent multi-second startups.
+	{ "j-hui/fidget.nvim", opts = { notification = { window = { winblend = 0 } } } },
+
+	-- Diagnostics / references / quickfix in one navigable list.
+	{
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		cmd = "Trouble",
+		opts = { focus = true },
+	},
+
+	-- ── Rust ─────────────────────────────────────────────────────────────────
+	-- rustaceanvim starts and owns rust-analyzer itself (that's why
+	-- lang/lsp.lua excludes rust_analyzer from mason-lspconfig's auto-enable).
+	{
+		"mrcjkb/rustaceanvim",
+		version = "^6",
+		lazy = false,
+		init = function()
+			vim.g.rustaceanvim = {
+				server = {
+					default_settings = {
+						["rust-analyzer"] = {
+							cargo = { allFeatures = true, buildScripts = { enable = true } },
+							checkOnSave = true,
+							check = { command = "clippy", extraArgs = { "--no-deps" } },
+							procMacro = { enable = true },
+							inlayHints = {
+								bindingModeHints = { enable = false },
+								closureReturnTypeHints = { enable = "with_block" },
+								lifetimeElisionHints = { enable = "skip_trivial" },
+								parameterHints = { enable = true },
+								typeHints = { enable = true },
+							},
+						},
+					},
+				},
+				dap = {
+					-- Picked up from Mason so `:RustLsp debuggables` just works.
+					adapter = require("rustaceanvim.config").get_codelldb_adapter(
+						vim.fn.stdpath("data") .. "/mason/bin/codelldb",
+						vim.fn.stdpath("data") .. "/mason/packages/codelldb/extension/lldb/lib/liblldb.so"
+					),
+				},
+			}
+		end,
+	},
+	{ "saecki/crates.nvim", event = { "BufRead Cargo.toml" }, opts = {} },
+
+	-- ── Debugging (DAP) ──────────────────────────────────────────────────────
+	{
+		"mfussenegger/nvim-dap",
+		dependencies = {
+			{ "rcarriga/nvim-dap-ui", dependencies = { "nvim-neotest/nvim-nio" } },
+			"theHamsta/nvim-dap-virtual-text",
+			"mfussenegger/nvim-dap-python",
+			"leoluz/nvim-dap-go",
+		},
+		config = function()
+			require("lang.dap").setup()
+		end,
+	},
+
+	-- ── Editing helpers that are language-aware ──────────────────────────────
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		opts = { check_ts = true },
+	},
+	{
+		"windwp/nvim-ts-autotag",
+		ft = {
+			"html",
+			"htmldjango",
+			"jinja",
+			"xml",
+			"javascript",
+			"javascriptreact",
+			"typescript",
+			"typescriptreact",
+			"vue",
+			"svelte",
+			"markdown",
+		},
+		opts = {},
 	},
 
 	{ "meatballs/notebook.nvim" },
@@ -571,6 +697,25 @@ local plugins = {
 			require("xls-viewer").setup()
 		end,
 	},
+	{
+		"kristijanhusak/vim-dadbod-ui",
+		dependencies = {
+			{ "tpope/vim-dadbod", lazy = true },
+			{
+				"kristijanhusak/vim-dadbod-completion",
+                 lazy = true, ft = { "sql", "mysql", "plsql" }
+			},
+		},
+		cmd = {
+			"DBUI",
+			"DBUIToggle",
+			"DBUIAddConnection",
+			"DBUIFindBuffer",
+		},
+		init = function()
+			vim.g.db_ui_use_nerd_fonts = 1
+		end,
+	},
 }
 
 require("lazy").setup(plugins)
@@ -630,49 +775,65 @@ require("nvim-tree").setup({
 require("Comment").setup()
 
 -- LSP CONFIG
-require("mason").setup()
+-- Per-server settings live in lua/lang/lsp.lua. They must be registered with
+-- vim.lsp.config() *before* mason-lspconfig enables the servers.
+local lsp = require("lang.lsp")
+lsp.setup()
+
 require("mason-lspconfig").setup({
+	ensure_installed = lsp.servers,
+	automatic_enable = { exclude = lsp.ignore_automatic_enable },
+})
+
+-- Formatters, linters and debug adapters (Mason package names).
+require("mason-tool-installer").setup({
 	ensure_installed = {
-		"lua_ls", -- Lua
-		"rust_analyzer", -- Rust
-		"pyright", -- Python (primary)
-		"tailwindcss", -- Tailwind CSS
-		"dockerls", -- Docker
-		"html", -- HTML
-		"cssls", -- CSS
-		"jsonls", -- JSON
-		"ts_ls", -- TypeScript/JavaScript (updated from tsserver)
-		"bashls", -- Bash
-		"clangd", -- C/C++
-		"gopls", -- Go
-		"emmet_ls", -- Emmet for HTML/JSX
+		-- debug adapters
+		"debugpy", -- Python
+		"delve", -- Go
+		"codelldb", -- Rust / C / C++
+		"js-debug-adapter", -- JavaScript / TypeScript
+		-- formatters
+		"stylua",
+		"black",
+		"isort",
+		"prettier",
+		"shfmt",
+		"clang-format",
+		"gofumpt",
+		"goimports",
+		"taplo",
+		-- linters
+		"shellcheck",
+		"golangci-lint",
 	},
+	run_on_start = true,
+	auto_update = false,
 })
-
--- LSP-ZERO SETUP
-local lsp_zero = require("lsp-zero")
-
--- LSP keybindings are set in keymaps.lua
--- Attach keybindings when LSP attaches to buffer
-vim.api.nvim_create_autocmd("LspAttach", {
-	group = vim.api.nvim_create_augroup("UserLspConfig", {}),
-	callback = function(ev)
-		local opts = { buffer = ev.buf }
-		-- Keybindings are already defined in keymaps.lua
-		-- This just ensures LSP is ready
-		vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
-	end,
-})
-
-lsp_zero.setup()
 
 -- AUTOCOMPLETE CONFIG
 local cmp = require("cmp")
+local luasnip = require("luasnip")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
-local cmp_action = require("lsp-zero").cmp_action()
 
 require("luasnip.loaders.from_vscode").lazy_load()
 
+-- Insert the matching pair after confirming a function completion.
+require("cmp").event:on("confirm_done", require("nvim-autopairs.completion.cmp").on_confirm_done())
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "sql", "mysql", "plsql" },
+	callback = function()
+		require("cmp").setup.buffer({
+			sources = {
+				{ name = "vim-dadbod-completion" },
+				{ name = "buffer" },
+			},
+		})
+	end,
+})
+
+-- 2. Your global cmp setup
 cmp.setup({
 	sources = {
 		{ name = "path" },
@@ -687,8 +848,26 @@ cmp.setup({
 		["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
 		["<C-y>"] = cmp.mapping.confirm({ select = true }),
 		["<C-Space>"] = cmp.mapping.complete(),
-		["<Tab>"] = cmp_action.tab_complete(),
-		["<S-Tab>"] = cmp_action.select_prev_or_fallback(),
+		-- Same behaviour lsp-zero's cmp_action.tab_complete() gave us:
+		-- cycle the menu, else jump the snippet, else fall through to a real Tab.
+		["<Tab>"] = cmp.mapping(function(fallback)
+			if cmp.visible() then
+				cmp.select_next_item(cmp_select)
+			elseif luasnip.locally_jumpable(1) then
+				luasnip.jump(1)
+			else
+				fallback()
+			end
+		end, { "i", "s" }),
+		["<S-Tab>"] = cmp.mapping(function(fallback)
+			if cmp.visible() then
+				cmp.select_prev_item(cmp_select)
+			elseif luasnip.locally_jumpable(-1) then
+				luasnip.jump(-1)
+			else
+				fallback()
+			end
+		end, { "i", "s" }),
 		["<CR>"] = cmp.mapping.confirm({ select = false }),
 	}),
 	snippet = {
@@ -708,8 +887,10 @@ cmp.setup({
 				luasnip = "⋗",
 				buffer = "Ω",
 				path = "🖫",
+				["vim-dadbod-completion"] = "🗄️", -- Added icon to prevent the nil crash
 			}
-			item.menu = menu_icon[entry.source.name]
+			-- Fallback to a default string if a source isn't explicitly mapped
+			item.menu = menu_icon[entry.source.name] or entry.source.name 
 			return item
 		end,
 	},
@@ -720,27 +901,51 @@ cmp.setup({
 require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
-		python = { "black", "isort" },
+		-- ruff replaces isort+black and is far faster, but it's only installed
+		-- via Mason's LSP package -- fall back to the system black/isort when
+		-- the ruff binary isn't on PATH.
+		python = function()
+			if vim.fn.executable("ruff") == 1 then
+				return { "ruff_organize_imports", "ruff_format" }
+			end
+			return { "isort", "black" }
+		end,
 		javascript = { "prettier" },
 		typescript = { "prettier" },
 		javascriptreact = { "prettier" },
 		typescriptreact = { "prettier" },
+		vue = { "prettier" },
+		svelte = { "prettier" },
 		css = { "prettier" },
+		scss = { "prettier" },
+		less = { "prettier" },
 		html = { "prettier" },
 		htmldjango = { "djlint" },
 		jinja = { "djlint" },
 		json = { "prettier" },
+		jsonc = { "prettier" },
 		yaml = { "prettier" },
 		markdown = { "prettier" },
-		go = { "gofmt", "goimports" },
+		graphql = { "prettier" },
+		go = { "goimports", "gofumpt" },
 		rust = { "rustfmt" },
 		sh = { "shfmt" },
 		bash = { "shfmt" },
+		zsh = { "shfmt" },
 		c = { "clang-format" },
 		cpp = { "clang-format" },
+		objc = { "clang-format" },
+		cuda = { "clang-format" },
+		proto = { "clang-format" },
+		toml = { "taplo" },
+		sql = { "sql_formatter" },
+		["_"] = { "trim_whitespace" },
+	},
+	formatters = {
+		shfmt = { prepend_args = { "-i", "4", "-ci" } },
 	},
 	-- NO format_on_save - format manually with <leader>f
-	lsp_fallback = true,
+	default_format_opts = { lsp_format = "fallback" },
 })
 
 -- JUPYTER NOTEBOOK (notebook.nvim) CONFIG

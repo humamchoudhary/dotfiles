@@ -10,8 +10,9 @@
 hl.bind("SUPER + Return", hl.dsp.exec_cmd("kitty"),         { description = "Open Terminal" })
 hl.bind("SUPER + e",      hl.dsp.exec_cmd("thunar"),           { description = "Open Thunar" })
 hl.bind("SUPER + x",      hl.dsp.exec_cmd("rofi -show drun -show-icons -icon-theme Papirus-Dark -drun-display-format '{name}' -theme ~/.config/rofi/launcher.rasi"),  { description = "App launcher" })
-hl.bind("SUPER + v",      hl.dsp.exec_cmd("bash -c 'cliphist list | rofi -dmenu -p \"󰅍 \" -theme ~/.config/rofi/clipboard.rasi | cliphist decode | wl-copy'"),  { description = "Clipboard history" })
+hl.bind("SUPER + v",      hl.dsp.exec_cmd("bash ~/.config/hypr/scripts/clipboard.sh"),  { description = "Clipboard history" })
 hl.bind("SUPER + equal", hl.dsp.exec_cmd("rofi -show calc -modi calc -no-show-match -no-sort -theme ~/.config/rofi/launcher.rasi"), { description = "Calculator" })
+hl.bind("SUPER + w",      hl.dsp.exec_cmd("bash ~/.config/hypr/scripts/websearch.sh"),  { description = "Web search / URL" })
 hl.bind("SUPER + r", hl.dsp.exec_cmd("~/.config/hypr/scripts/reload.sh"))
 
 
@@ -21,6 +22,10 @@ hl.bind("SUPER + q", hl.dsp.window.close(), { description = "Kill active window"
 hl.bind("SUPER + f", function()
     hl.dispatch(hl.dsp.window.fullscreen({ action = "toggle" }))
 end, { description = "Toggle Fullscreen" })
+
+hl.bind("SUPER + m", function()
+    hl.dispatch(hl.dsp.window.fullscreen({ mode = 1 }))
+end, { description = "Toggle Maximize" })
 
 hl.bind("SUPER + SHIFT + f", function()
     hl.dispatch(hl.dsp.window.float({ action = "toggle" }))
@@ -90,6 +95,7 @@ hl.bind("SUPER + ALT + l", hl.dsp.exec_cmd("hyprlock"),                         
 hl.bind("SUPER + ALT + p", hl.dsp.exec_cmd("~/.config/hypr/scripts/powermenu.sh"),                  { description = "Power menu" })
 hl.bind("SUPER + ALT + t", hl.dsp.exec_cmd("~/.config/dotthemes/rofi-theme-switcher.sh"),           { description = "Theme switcher" })
 hl.bind("SUPER + ALT + w", hl.dsp.exec_cmd("~/.config/dotthemes/rofi-wallpaper-picker.sh"),         { description = "Wallpaper picker" })
+hl.bind("CTRL + n",        hl.dsp.exec_cmd("~/.config/hypr/scripts/nightmode.sh"),                  { description = "Toggle night mode" })
 
 -- ── Media ──────────────────────────────────────────────────────────────────────
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"), { repeating = true })

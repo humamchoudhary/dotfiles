@@ -19,7 +19,7 @@
 
     "custom/launcher":{
         "format": "\uf40e",
-        "on-click": "ags toggle AppLauncher",
+        "on-click": "rofi -show drun -show-icons -icon-theme Papirus-Dark -drun-display-format '{name}' -theme ~/.config/rofi/launcher.rasi",
         "tooltip": false
     },
     "custom/notification":{

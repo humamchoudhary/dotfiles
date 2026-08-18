@@ -15,4 +15,14 @@
 -- windowrulev2 = float,    class:^(Rofi)$
 -- windowrulev2 = pin,      class:^(Rofi)$
 -- windowrulev2 = stayfullscreen, class:^(Rofi)$
+
+-- ── Scratchpad terminal ──────────────────────────────────────────────────────
+-- Routes the persistent scratchpad kitty (class "scratch-term") onto the
+-- `scratch` special workspace as a centred floating window.
+local scratch = { class = "scratch-term" }
+hl.window_rule({ name = "float",                       match = scratch })
+hl.window_rule({ name = "size 60% 60%",                match = scratch })
+hl.window_rule({ name = "center",                      match = scratch })
+hl.window_rule({ name = "workspace special:scratch silent", match = scratch })
+
 return {}
