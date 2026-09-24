@@ -1,29 +1,17 @@
-#  Startup 
-# Commands to execute on startup (before the prompt is shown)
-# Check if the interactive shell option is set
+# ============================================================
+#  user.zsh — your personal zsh config
+#  Sourced at the end of .zshrc, so anything set here wins.
+#  Add your own aliases, functions, and environment here.
+# ============================================================
 
 
-if [[ $- == *i* ]]; then
-    # This is a good place to load graphic/ascii art, display system information, etc.
-    if command -v pokego >/dev/null; then
-        pokego --no-title -r 1,3,6
-    elif command -v pokemon-colorscripts >/dev/null; then
-        pokemon-colorscripts --no-title -r 1,3,6
-    elif command -v fastfetch >/dev/null; then
-        if do_render "image"; then
-            fastfetch --logo-type kitty
-        fi
-    fi
-fi
-
-
-
+# Extra personal config if it exists
 if [ -f ~/.zshrc_custom ]; then
     source ~/.zshrc_custom
 fi
 
 
-# Add this to your ~/.zshrc
+# ---------- git: stage, commit, push ----------
 function gacp() {
   if [ -z "$1" ]; then
     echo "Please provide a commit message."
@@ -65,6 +53,7 @@ function gacp() {
 }
 
 
+# ---------- git: commit with Gemini AI ----------
 gask() {
   # Check if commit message is provided
   if [ -z "$1" ]; then
@@ -74,7 +63,7 @@ gask() {
   fi
 
   local commit_message="$1"
-  
+
   # Check if gai is installed
   if ! command -v gai &>/dev/null; then
     echo "gai command not found. Please install it first."
@@ -95,12 +84,12 @@ gask() {
   if ! gai config show 2>&1 | grep -q "API Key:"; then
     echo "API key not found. Please enter your Gemini API key:"
     read -r api_key
-    
+
     if [ -z "$api_key" ]; then
       echo "API key cannot be empty"
       return 1
     fi
-    
+
     gai config set-key "$api_key"
     if [ $? -ne 0 ]; then
       echo "Failed to set API key"
@@ -124,7 +113,7 @@ gask() {
   # Run commit
   echo "Sending prompt to Gemini..."
   gai commit -m "$commit_message" --model "$model" --temperature "$temperature"
-  
+
   if [ $? -eq 0 ]; then
     echo "Commit completed successfully"
   else
@@ -133,7 +122,7 @@ gask() {
   fi
 }
 
-# Optional: Add completion for gask
+# Completion for gask
 if command -v compdef &>/dev/null; then
   compdef _gask gask
   _gask() {
@@ -147,6 +136,8 @@ if command -v compdef &>/dev/null; then
   }
 fi
 
+
+# ---------- yazi: cd into the directory you exit on ----------
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -155,6 +146,8 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+
+# ---------- Postgres-aware system upgrade ----------
 function upgdsys() {
     echo "==> Checking PostgreSQL version..."
     local old_ver=$(psql --version | awk '{print $3}' | cut -d. -f1)
@@ -198,42 +191,7 @@ function upgdsys() {
 }
 
 
-
-
-#   Overrides 
-# HYDE_ZSH_NO_PLUGINS=1 # Set to 1 to disable loading of oh-my-zsh plugins, useful if you want to use your zsh plugins system 
-# unset HYDE_ZSH_PROMPT # Uncomment to unset/disable loading of prompts from HyDE and let you load your own prompts
-# HYDE_ZSH_COMPINIT_CHECK=1 # Set 24 (hours) per compinit security check // lessens startup time
-# HYDE_ZSH_OMZ_DEFER=1 # Set to 1 to defer loading of oh-my-zsh plugins ONLY if prompt is already loaded
-
-if [[ ${HYDE_ZSH_NO_PLUGINS} != "1" ]]; then
-    #  OMZ Plugins 
-    # manually add your oh-my-zsh plugins here
-    plugins=(
-        "sudo"
-        "z"
-        "git"
-        "fzf"
-	"zsh-autosuggestions"
-	"zsh-syntax-highlighting"
-	"zsh-completions"
-    "zsh-256color"
-    )
-fi
-#export PYENV_ROOT="$HOME/.pyenv"
-#[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-#eval "$(pyenv init - zsh)"
-#eval "$(pyenv virtualenv-init -)"
-
-export NVM_DIR="$HOME/.nvm"
-source /usr/share/nvm/init-nvm.sh
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
-
-#alias aws-eu='export AWS_PROFILE=default'
-#alias aws-us='export AWS_PROFILE=se-us-east'
-
+# ---------- AWS profiles & regions ----------
 alias aws-eu='export AWS_PROFILE=default'
 alias aws-us='export AWS_PROFILE=se-us-east'
 
@@ -309,6 +267,6 @@ aws-region() {
   echo "AWS_REGION=${AWS_REGION}"
 }
 
-export EXA_COLORS="di=01;38;5;15:fi=38;5;7:ln=01;38;5;11"
 
-export PATH="$PATH:$(go env GOPATH)/bin"
+# ---------- eza / ls colors ----------
+export EXA_COLORS="di=01;38;5;15:fi=38;5;7:ln=01;38;5;11"

@@ -1,51 +1,115 @@
-# Add user configurations here
-# For HyDE to not touch your beloved configurations,
-# we added a config file for you to customize HyDE before loading zshrc
-# Edit $ZDOTDIR/.user.zsh to customize HyDE before loading zshrc
+# ============================================================
+#  .zshrc — main zsh configuration (interactive shells)
+#
+#  Everything for interactive use lives in this one file so
+#  the behavior is the same in every shell. Your personal
+#  functions/aliases go in user.zsh — it is sourced at the
+#  very end, so it can override anything set here.
+# ============================================================
 
-#  Plugins 
-# oh-my-zsh plugins are loaded  in $ZDOTDIR/.user.zsh file, see the file for more information
 
-#  Aliases 
-# Override aliases here in '$ZDOTDIR/.zshrc' (already set in .zshenv)
+# ---------- History ----------
+HISTFILE="$ZDOTDIR/.zsh_history"
+HISTSIZE=10000
+SAVEHIST=10000
+setopt HIST_IGNORE_DUPS HIST_IGNORE_SPACE SHARE_HISTORY
 
-# # Helpful aliases
+
+# ---------- PATH ----------
+export PATH="$HOME/.local/bin:$PATH"           # user-local binaries
+export PATH="/home/humam/.opencode/bin:$PATH"  # opencode
+command -v go >/dev/null 2>&1 && export PATH="$PATH:$(go env GOPATH)/bin"  # Go binaries
+
+
+# ---------- Completions path ----------
+# Drop compdef-based completion files in the completions/ folder;
+# they are picked up by compinit (run by oh-my-zsh below).
+fpath=("$ZDOTDIR/completions" "${fpath[@]}")
+
+
+# ---------- Oh My Zsh ----------
+# ZSH_THEME stays empty because the prompt belongs to starship (below).
+# oh-my-zsh just supplies the plugins and helper functions.
+if [ -d "$HOME/.oh-my-zsh" ]; then
+    export ZSH="$HOME/.oh-my-zsh"
+    ZSH_THEME=""
+    # Bundled plugins: git sudo z extract
+    # Custom plugins (must exist under $ZSH/custom/plugins): zsh-256color zsh-completions zsh-syntax-highlighting
+    plugins=(git sudo z extract zsh-256color zsh-completions zsh-syntax-highlighting zsh-history-substring-search zsh-autosuggestions zsh-interactive-cd fzf virtualenv  docker)
+    source "$ZSH/oh-my-zsh.sh"
+fi
+
+# ---------- Custom functions & completions ----------
+# Drop a .zsh file into the functions/ or completions/ folder and it's loaded here.
+for f in "$ZDOTDIR"/functions/*.zsh(.N); do
+    [ -r "$f" ] && source "$f"
+done
+for f in "$ZDOTDIR"/completions/*.zsh(.N); do
+    [ -r "$f" ] && source "$f"
+done
+
+# ---------- Prompt (starship) ----------
+command -v starship >/dev/null 2>&1 && eval "$(starship init zsh)"
+
+
+# ---------- Aliases ----------
+aurhelper=yay                                   # change to paru if you use paru
+
 alias c='clear'                                                        # clear terminal
 alias l='eza -lh --icons=auto'                                         # long list
 alias ls='eza -1 --icons=auto'                                         # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias ld='eza -lhD --icons=auto'                                       # long list dirs
 alias lt='eza --icons=auto --tree'                                     # list folder as tree
-alias un='$aurhelper -Rns'                                             # uninstall package
-alias up='$aurhelper -Syyuu'                                             # update system/package/aur
-alias pl='$aurhelper -Qs'                                              # list installed package
-alias pa='$aurhelper -Ss'                                              # list available package
-alias pc='$aurhelper -Sc'                                              # remove unused cache
+alias un='$aurhelper -Rns'                                              # uninstall package
+alias up='$aurhelper -Syyuu'                                            # update system/package/aur
+alias pl='$aurhelper -Qs'                                               # list installed package
+alias pa='$aurhelper -Ss'                                               # list available package
+alias pc='$aurhelper -Sc'                                               # remove unused cache
 alias po='$aurhelper -Qtdq | $aurhelper -Rns -'                        # remove unused packages, also try > $aurhelper -Qqd | $aurhelper -Rsu --print -
 alias vc='code'                                                        # gui code editor
 alias fastfetch='fastfetch --logo-type kitty'
 
-# # Directory navigation shortcuts
+# Directory navigation shortcuts
 alias ..='cd ..'
 alias ...='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
-# # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
+# Always mkdir a path (doesn't inhibit making a single dir)
 # alias mkdir='mkdir -p'
 
-#  This is your file 
-# Add your configurations here
+
+# ---------- Environment ----------
 export EDITOR=nvim
 # export EDITOR=code
-
 export EXPLORER=thunar
 
+# nvm (Node version manager)
+export NVM_DIR="$HOME/.nvm"
+[ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 
-# unset -f command_not_found_handler # Uncomment to prevent searching for commands not found in package manager
+# awen — terminal intelligence layer
+[ -f "$HOME/.config/awen/awen.zsh" ] && source "$HOME/.config/awen/awen.zsh"
 
 
+# ---------- Startup art ----------
+if [[ $- == *i* ]]; then
+    if command -v pokego >/dev/null; then
+        pokego --no-title -r 1,3,6
+    elif command -v pokemon-colorscripts >/dev/null; then
+        pokemon-colorscripts --no-title -r 1,3,6
+    elif command -v fastfetch >/dev/null; then
+        fastfetch --logo-type kitty
+    fi
+fi
 
-# opencode
-export PATH=/home/humam/.opencode/bin:$PATH
+
+# ---------- Personal config (sourced last so it wins) ----------
+[ -f "$ZDOTDIR/user.zsh" ] && source "$ZDOTDIR/user.zsh"
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"

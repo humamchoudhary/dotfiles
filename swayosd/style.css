@@ -1,0 +1,10 @@
+window#osd {
+  background: rgba(30, 30, 46, 0.9);
+  border-radius: 16px;
+  border: 1px solid rgba(203, 166, 247, 0.4);
+}
+progressbar progress {
+  background: #cba6f7;
+  border-radius: 8px;
+}
+image, label { color: #cdd6f4; }

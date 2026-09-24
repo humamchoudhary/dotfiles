@@ -47,6 +47,7 @@
         "on-click":"ags toggle Clock"
     },
 
+
     "hyprland/window": {
         "format": "{}",
         "max-length": 40

@@ -1,4 +1,4 @@
--- lua/keymaps.lua
+-- lua/config/keymaps.lua
 -- Centralized keymap configuration with which-key integration
 
 local M = {}
@@ -15,7 +15,7 @@ M.setup = function()
         -- GENERAL / NORMAL MODE KEYBINDINGS
         -- ============================================================================
         { "<leader>ld",    "<cmd>DocsViewToggle<CR>",                                                      desc = "LSP Doc",                           mode = { "n" } },
-        { "<C-s>",         function() require("keymaps").save_with_feedback() end,                         desc = "Save file",                         mode = { "n", "i" } },
+        { "<C-s>",         function() require("config.keymaps").save_with_feedback() end,                         desc = "Save file",                         mode = { "n", "i" } },
         { "<C-d>",         "<C-d>zz",                                                                      desc = "Scroll down (centered)",            mode = "n" },
         { "<C-u>",         "<C-u>zz",                                                                      desc = "Scroll up (centered)",              mode = "n" },
         { "n",             "nzzv",                                                                         desc = "Next search result (centered)",     mode = "n" },
@@ -50,9 +50,19 @@ M.setup = function()
 
 
         -- Spectre
-        { "<leader>s",     group = "Spectre" }, -- top-level group for Spectre
+        { "<leader>s",     group = "Search/SQL" }, -- top-level group
         { "<leader>sr",    "<cmd>lua require('spectre').open()<CR>",                                       desc = "Open Spectre Search/Replace" },
         { "<leader>sf",    "<cmd>lua require('spectre').open_file_search()<CR>",                           desc = "Search in current file" },
+
+        -- sqlc (0xveya/sqlc.nvim). The plugin's own keymaps are disabled in
+        -- lua/plugins/sqlc.lua so they can be declared here instead.
+        { "<leader>sq",    group = "sqlc" },
+        { "<leader>sqa",   "<cmd>SqlcQueries<CR>",                                                         desc = "sqlc: find query" },
+        { "<leader>sqp",   "<cmd>SqlcPackages<CR>",                                                        desc = "sqlc: pick package, then query" },
+        { "<leader>sqc",   "<cmd>SqlcQueryCommands<CR>",                                                   desc = "sqlc: pick command type (:one/:many/...)" },
+        { "<leader>sqg",   "<cmd>SqlcGroup<CR>",                                                           desc = "sqlc: change picker grouping" },
+        { "<leader>sqv",   "<cmd>SqlcVet<CR>",                                                             desc = "sqlc: run vet now" },
+        { "<leader>sqx",   "<cmd>SqlcDiagnosticsClear<CR>",                                                desc = "sqlc: clear diagnostics" },
 
         -- Clipboard operations
         { "<leader>y",     '"+y',                                                                          desc = "Yank to system clipboard",          mode = { "n", "v" } },
@@ -81,7 +91,7 @@ M.setup = function()
         { "<leader>vca",   function() vim.lsp.buf.code_action() end,                                       desc = "Code action",                       mode = { "n", "v" } },
         { "<leader>vrr",   function() vim.lsp.buf.references() end,                                        desc = "References" },
         { "<leader>vrn",   function() vim.lsp.buf.rename() end,                                            desc = "Rename" },
-        { "<leader>vh",    function() require("keymaps").toggle_inlay_hints() end,                         desc = "Toggle inlay hints" },
+        { "<leader>vh",    function() require("config.keymaps").toggle_inlay_hints() end,                         desc = "Toggle inlay hints" },
         { "<leader>vi",    "<cmd>LspInfo<CR>",                                                             desc = "LSP info" },
         { "<leader>vR",    "<cmd>LspRestart<CR>",                                                          desc = "Restart LSP" },
 
@@ -117,6 +127,13 @@ M.setup = function()
         -- Database (dbee)
         { "<leader>d",     group = "Database/Docs" },
         { "<leader>dd",    function() require("docviewer").toggle() end,                                   desc = "Toggle Documentation Viewer" },
+        { "<leader>ds",    "<cmd>DbSelect<CR>",                                                            desc = "Pick DB for SQL completion" },
+        { "<leader>di",    "<cmd>DbInfo<CR>",                                                              desc = "Show DB used for SQL completion" },
+        -- Cycle which kind of dadbod suggestion is shown (tables / columns /
+        -- schemas / ...). In insert mode <C-l> does the same, buffer-locally
+        -- in SQL buffers -- see lua/lang/sql.lua.
+        { "<leader>dk",    "<cmd>DbKindNext<CR>",                                                          desc = "Next dadbod suggestion kind" },
+        { "<leader>dK",    "<cmd>DbKindPrev<CR>",                                                          desc = "Previous dadbod suggestion kind" },
         { "<leader>db",    "<cmd>Dbee<cr>",                                                                desc = "Open Dbee" },
         { "<leader>dbr",   "<cmd>DbeeBuffers<cr>",                                                         desc = "Show Dbee buffers" },
         { "<leader>dbc",   "<cmd>DbeeConnections<cr>",                                                     desc = "Show Dbee connections" },
