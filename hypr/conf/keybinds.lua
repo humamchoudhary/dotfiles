@@ -8,7 +8,8 @@
 
 -- ── Apps ───────────────────────────────────────────────────────────────────────
 hl.bind("SUPER + Return", hl.dsp.exec_cmd("kitty"), { description = "Open Terminal" })
-hl.bind("SUPER + e", hl.dsp.exec_cmd("thunar"), { description = "Open Thunar" })
+-- hl.bind("SUPER + e", hl.dsp.exec_cmd("thunar"), { description = "Open Thunar" })
+hl.bind("SUPER + e", hl.dsp.exec_cmd("kitty --class 'elio' elio ~/"), { description = "Open File Manager" })
 hl.bind(
 	"SUPER + x",
 	hl.dsp.exec_cmd(

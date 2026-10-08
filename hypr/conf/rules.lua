@@ -16,10 +16,10 @@ hl.window_rule({
 })
 
 hl.window_rule({
-	match = { class = "thunar" },
+	match = { class = "elio" },   -- or initial_class, depending on the wrapper's naming
 	float = true,
-	size = "(monitor_w*0.5) (monitor_h*0.5)",
-	move = "10  monitor_h/2-10",
+	size = "(monitor_w*0.65) (monitor_h*0.65)",
+	center = true,
 })
 
 hl.window_rule({
@@ -35,24 +35,26 @@ hl.window_rule({
 	center = true,
 })
 
-
 hl.on("window.title", function(w)
-	if not w or not w.title then return end
-	if not w.title:lower():find("extension", 1, true) then return end
+	if not w or not w.title then
+		return
+	end
+	if not w.title:lower():find("extension", 1, true) then
+		return
+	end
 
 	-- 1. Correct the action to "on" and target this specific window
 	hl.dispatch(hl.dsp.window.float({ action = "on", window = w }))
-	
+
 	-- 2. Resize the targeted window
 	hl.dispatch(hl.dsp.window.resize({ x = "500", y = "800", window = w }))
-	
+
 	-- 3. Pinning only works AFTER the window is successfully floating
 	hl.dispatch(hl.dsp.window.pin({ action = "on", window = w }))
-	
+
 	-- 4. Center the window on the screen
 	hl.dispatch(hl.dsp.window.center({ window = w }))
 end)
-
 
 hl.window_rule({
 	match = {
