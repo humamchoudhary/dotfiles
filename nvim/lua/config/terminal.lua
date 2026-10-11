@@ -9,7 +9,7 @@
 --
 -- Slots 1-6 therefore keep conventional hues so logs stay legible. The
 -- neutrals and magenta come from lua/theme.lua, so the palette still follows
--- whatever dotthemes/rofi-theme-switcher.sh last wrote.
+-- whatever dotthemes/theme-picker.sh last wrote.
 
 local p = require("theme")
 

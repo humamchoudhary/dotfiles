@@ -113,3 +113,43 @@ fi
 . "$HOME/.atuin/bin/env"
 
 eval "$(atuin init zsh)"
+
+# >>> elio shell integration >>>
+elio() {
+    case "${1-}" in
+        shell|portal|-*)
+            command elio "$@"
+            return $?
+            ;;
+    esac
+
+    local arg tmp cwd status_code
+    for arg in "$@"; do
+        case "$arg" in
+            --chooser-file|--chooser-file=*)
+                command elio "$@"
+                return $?
+                ;;
+        esac
+    done
+
+    tmp="$(mktemp -t "elio-cwd.XXXXXX")" || return
+    command elio --cwd-file "$tmp" "$@"
+    status_code=$?
+
+    if [ -s "$tmp" ]; then
+        cwd="$(cat -- "$tmp")"
+        rm -f -- "$tmp"
+        if [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && [ -d "$cwd" ]; then
+            cd -- "$cwd" || return $?
+        fi
+    else
+        rm -f -- "$tmp"
+    fi
+
+    return "$status_code"
+}
+# <<< elio shell integration <<<
+
+
+export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"

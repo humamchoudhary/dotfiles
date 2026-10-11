@@ -1,0 +1,44 @@
+// fum — basic config (Neon Purple palette)
+// TUI MPRIS client: controls whatever player is active (browser, mpv, ...).
+// Opened from the waybar music module. Keys: space play/pause, h/l prev/next.
+{
+	"use_active_player": true,
+	"fps": 12,
+	"width": 44,
+	"height": 22,
+	"align": "center",
+	"keybinds": {
+		"esc;q": "quit()",
+		"h": "prev()",
+		"l": "next()",
+		" ": "play_pause()"
+	},
+	"layout": [
+		{ "type": "cover-art", "width": 44, "height": 14, "resize": "fit" },
+		{ "type": "empty", "size": 1 },
+		{ "type": "label", "text": "$title", "align": "center", "bold": true, "fg": "#f0f0f5" },
+		{ "type": "label", "text": "$artists", "align": "center", "fg": "#6b6b78" },
+		{ "type": "empty", "size": 1 },
+		{
+			"type": "container",
+			"height": 1,
+			"flex": "space-around",
+			"children": [
+				{ "type": "button", "text": "󰒮", "action": "prev()", "fg": "#b57bee" },
+				{ "type": "button", "text": "$status-icon", "action": "play_pause()", "fg": "#b57bee" },
+				{ "type": "button", "text": "󰒭", "action": "next()", "fg": "#b57bee" }
+			]
+		},
+		{ "type": "empty", "size": 1 },
+		{ "type": "progress", "progress": { "char": "█", "fg": "#b57bee" }, "empty": { "char": "░", "fg": "#272730" } },
+		{
+			"type": "container",
+			"height": 1,
+			"flex": "space-between",
+			"children": [
+				{ "type": "label", "text": "$position", "align": "left", "fg": "#6b6b78" },
+				{ "type": "label", "text": "$length", "align": "right", "fg": "#6b6b78" }
+			]
+		}
+	]
+}

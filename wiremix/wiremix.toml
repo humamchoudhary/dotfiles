@@ -1,0 +1,31 @@
+# wiremix — basic config (merged over upstream defaults)
+# Opened from the waybar volume module; keys: ? help, hjkl/arrows navigate,
+# c route, m mute, d set default. Tabs: playback, recording, output, input,
+# configuration (Tab / Shift+Tab to switch).
+#
+# Theme colors in here are managed by dotthemes/theme-picker.sh — it rewrites
+# the hex values to match the active palette. Each hex appears once.
+mouse = true
+peaks = "auto"
+tab = "playback"
+
+# Match swayosd-client's --max-volume 150
+max_volume_percent = 150.0
+enforce_max_volume = false
+
+# Custom theme: accent + muted colors over wiremix's default styles
+theme = "custom"
+
+[themes.custom]
+selector          = { fg = "#b57bee" }
+tab_selected      = { fg = "#b57bee" }
+tab_marker        = { fg = "#b57bee" }
+volume_filled     = { fg = "#b57bee" }
+volume_empty      = { fg = "#6b6b78" }
+meter_active      = { fg = "#b57bee" }
+meter_inactive    = { fg = "#6b6b78" }
+meter_center_active   = { fg = "#b57bee" }
+meter_center_inactive = { fg = "#6b6b78" }
+dropdown_selected = { fg = "#b57bee", add_modifier = "REVERSED" }
+list_more         = { fg = "#6b6b78" }
+dropdown_more     = { fg = "#6b6b78" }

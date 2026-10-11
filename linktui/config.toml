@@ -1,0 +1,18 @@
+# linktui — basic config (Neon Purple palette)
+# Canvas size in cells; the kitty window rule must be at least this big
+# (~9x19 px per cell with the current kitty font). Min: 70 x 25.
+[window]
+width  = 70
+height = 25
+
+[colors]
+foreground           = "#c8c8d4"
+background           = "#0d0d0f"
+accent               = "#b57bee"
+highlight            = "#b57bee"
+highlight_background = "#1a1a1f"
+muted                = "#6b6b78"
+border               = "#272730"
+popup_background     = "#131316"
+log_background       = "#020203"
+cursor               = "#f0f0f5"

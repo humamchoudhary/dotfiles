@@ -1,362 +1,6149 @@
 [
   {
-    "palette": "Neon Purple",
+    "palette": "Catppuccin Latte",
     "colors": {
-      "true_black":    { "hex": "#020203", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#0d0d0f", "role": "Primary bg" },
-      "surface":       { "hex": "#131316", "role": "Windows / panels" },
-      "elevated":      { "hex": "#1a1a1f", "role": "Statusbar / popups" },
-      "border":        { "hex": "#272730", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#6b6b78", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#c8c8d4", "role": "Body text" },
-      "bright_text":   { "hex": "#f0f0f5", "role": "Titles / active" },
-      "accent":        { "hex": "#b57bee", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#7c4db0", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#dce0e8", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#e6e9ef", "role": "Primary bg" },
+      "surface": { "hex": "#eff1f5", "role": "Windows / panels" },
+      "elevated": { "hex": "#ccd0da", "role": "Statusbar / popups" },
+      "border": { "hex": "#bcc0cc", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#8c8fa1", "role": "Inactive / comments" },
+      "body_text": { "hex": "#5c5f77", "role": "Body text" },
+      "bright_text": { "hex": "#4c4f69", "role": "Titles / active" },
+      "accent": {
+        "hex": "#8839ef",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#1e66f5", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Cyber Cyan",
+    "palette": "Catppuccin Frappé",
     "colors": {
-      "true_black":    { "hex": "#020203", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#0d0d0f", "role": "Primary bg" },
-      "surface":       { "hex": "#131316", "role": "Windows / panels" },
-      "elevated":      { "hex": "#1a1a1f", "role": "Statusbar / popups" },
-      "border":        { "hex": "#272730", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#6b6b78", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#c8c8d4", "role": "Body text" },
-      "bright_text":   { "hex": "#f0f0f5", "role": "Titles / active" },
-      "accent":        { "hex": "#00e5cc", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#008c7e", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#232634", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#292c3c", "role": "Primary bg" },
+      "surface": { "hex": "#303446", "role": "Windows / panels" },
+      "elevated": { "hex": "#414559", "role": "Statusbar / popups" },
+      "border": { "hex": "#51576d", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#838ba7", "role": "Inactive / comments" },
+      "body_text": { "hex": "#c6d0f5", "role": "Body text" },
+      "bright_text": { "hex": "#f2d5cf", "role": "Titles / active" },
+      "accent": {
+        "hex": "#ca9ee6",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#8caaee", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Electric Blue",
+    "palette": "Catppuccin Macchiato",
     "colors": {
-      "true_black":    { "hex": "#020203", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#0d0d0f", "role": "Primary bg" },
-      "surface":       { "hex": "#131316", "role": "Windows / panels" },
-      "elevated":      { "hex": "#1a1a1f", "role": "Statusbar / popups" },
-      "border":        { "hex": "#272730", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#6b6b78", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#c8c8d4", "role": "Body text" },
-      "bright_text":   { "hex": "#f0f0f5", "role": "Titles / active" },
-      "accent":        { "hex": "#4d9fff", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#1a5ab8", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#181926", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#1e2030", "role": "Primary bg" },
+      "surface": { "hex": "#24273a", "role": "Windows / panels" },
+      "elevated": { "hex": "#363a4f", "role": "Statusbar / popups" },
+      "border": { "hex": "#494d64", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#8087a2", "role": "Inactive / comments" },
+      "body_text": { "hex": "#cad3f5", "role": "Body text" },
+      "bright_text": { "hex": "#f4dbd6", "role": "Titles / active" },
+      "accent": {
+        "hex": "#c6a0f6",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#8aadf4", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Toxic Green",
+    "palette": "Gruvbox Material",
     "colors": {
-      "true_black":    { "hex": "#020203", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#0d0d0f", "role": "Primary bg" },
-      "surface":       { "hex": "#131316", "role": "Windows / panels" },
-      "elevated":      { "hex": "#1a1a1f", "role": "Statusbar / popups" },
-      "border":        { "hex": "#272730", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#6b6b78", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#c8c8d4", "role": "Body text" },
-      "bright_text":   { "hex": "#f0f0f5", "role": "Titles / active" },
-      "accent":        { "hex": "#39d353", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#1a7a2e", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#1d2021", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#282828", "role": "Primary bg" },
+      "surface": { "hex": "#32302f", "role": "Windows / panels" },
+      "elevated": { "hex": "#3c3836", "role": "Statusbar / popups" },
+      "border": { "hex": "#504945", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#7c6f64", "role": "Inactive / comments" },
+      "body_text": { "hex": "#d4be98", "role": "Body text" },
+      "bright_text": { "hex": "#ddc7a1", "role": "Titles / active" },
+      "accent": {
+        "hex": "#a9b665",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#89b482", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Vivid Orange",
+    "palette": "One Dark",
     "colors": {
-      "true_black":    { "hex": "#020203", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#0d0d0f", "role": "Primary bg" },
-      "surface":       { "hex": "#131316", "role": "Windows / panels" },
-      "elevated":      { "hex": "#1a1a1f", "role": "Statusbar / popups" },
-      "border":        { "hex": "#272730", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#6b6b78", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#c8c8d4", "role": "Body text" },
-      "bright_text":   { "hex": "#f0f0f5", "role": "Titles / active" },
-      "accent":        { "hex": "#ff6b35", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#b03d12", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#1a1d23", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#21252b", "role": "Primary bg" },
+      "surface": { "hex": "#282c34", "role": "Windows / panels" },
+      "elevated": { "hex": "#2c313a", "role": "Statusbar / popups" },
+      "border": { "hex": "#3e4451", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#5c6370", "role": "Inactive / comments" },
+      "body_text": { "hex": "#abb2bf", "role": "Body text" },
+      "bright_text": { "hex": "#ffffff", "role": "Titles / active" },
+      "accent": {
+        "hex": "#61afef",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#c678dd", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Hot Pink",
+    "palette": "One Light",
     "colors": {
-      "true_black":    { "hex": "#020203", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#0d0d0f", "role": "Primary bg" },
-      "surface":       { "hex": "#131316", "role": "Windows / panels" },
-      "elevated":      { "hex": "#1a1a1f", "role": "Statusbar / popups" },
-      "border":        { "hex": "#272730", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#6b6b78", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#c8c8d4", "role": "Body text" },
-      "bright_text":   { "hex": "#f0f0f5", "role": "Titles / active" },
-      "accent":        { "hex": "#f050a0", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#9e2060", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#fafafa", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#fafafa", "role": "Primary bg" },
+      "surface": { "hex": "#f0f0f0", "role": "Windows / panels" },
+      "elevated": { "hex": "#e5e5e6", "role": "Statusbar / popups" },
+      "border": { "hex": "#d4d4d4", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#a0a1a7", "role": "Inactive / comments" },
+      "body_text": { "hex": "#383a42", "role": "Body text" },
+      "bright_text": { "hex": "#090a0b", "role": "Titles / active" },
+      "accent": {
+        "hex": "#4078f2",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#a626a4", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Solarized Dark",
+    "palette": "Monokai Pro",
     "colors": {
-      "true_black":    { "hex": "#001e27", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#002b36", "role": "Primary bg" },
-      "surface":       { "hex": "#073642", "role": "Windows / panels" },
-      "elevated":      { "hex": "#12464f", "role": "Statusbar / popups" },
-      "border":        { "hex": "#2d5f6b", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#586e75", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#839496", "role": "Body text" },
-      "bright_text":   { "hex": "#eee8d5", "role": "Titles / active" },
-      "accent":        { "hex": "#268bd2", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#2aa198", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#19181a", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#221f22", "role": "Primary bg" },
+      "surface": { "hex": "#2d2a2e", "role": "Windows / panels" },
+      "elevated": { "hex": "#363437", "role": "Statusbar / popups" },
+      "border": { "hex": "#5b595c", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#727072", "role": "Inactive / comments" },
+      "body_text": { "hex": "#c1c0c0", "role": "Body text" },
+      "bright_text": { "hex": "#fcfcfa", "role": "Titles / active" },
+      "accent": {
+        "hex": "#ffd866",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#ff6188", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Gruvbox Dark",
+    "palette": "Monokai Classic",
     "colors": {
-      "true_black":    { "hex": "#1d2021", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#282828", "role": "Primary bg" },
-      "surface":       { "hex": "#32302f", "role": "Windows / panels" },
-      "elevated":      { "hex": "#3c3836", "role": "Statusbar / popups" },
-      "border":        { "hex": "#504945", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#928374", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#d5c4a1", "role": "Body text" },
-      "bright_text":   { "hex": "#fbf1c7", "role": "Titles / active" },
-      "accent":        { "hex": "#fabd2f", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#d79921", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#1e1f1c", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#272822", "role": "Primary bg" },
+      "surface": { "hex": "#2d2e27", "role": "Windows / panels" },
+      "elevated": { "hex": "#3e3d32", "role": "Statusbar / popups" },
+      "border": { "hex": "#49483e", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#75715e", "role": "Inactive / comments" },
+      "body_text": { "hex": "#f8f8f2", "role": "Body text" },
+      "bright_text": { "hex": "#ffffff", "role": "Titles / active" },
+      "accent": {
+        "hex": "#a6e22e",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#66d9ef", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Nord",
+    "palette": "Material Palenight",
     "colors": {
-      "true_black":    { "hex": "#1a1f24", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#242933", "role": "Primary bg" },
-      "surface":       { "hex": "#2e3440", "role": "Windows / panels" },
-      "elevated":      { "hex": "#3b4252", "role": "Statusbar / popups" },
-      "border":        { "hex": "#434c5e", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#6d7a8d", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#d8dee9", "role": "Body text" },
-      "bright_text":   { "hex": "#eceff4", "role": "Titles / active" },
-      "accent":        { "hex": "#88c0d0", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#5e81ac", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#1b1e2b", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#232635", "role": "Primary bg" },
+      "surface": { "hex": "#292d3e", "role": "Windows / panels" },
+      "elevated": { "hex": "#32374d", "role": "Statusbar / popups" },
+      "border": { "hex": "#444267", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#676e95", "role": "Inactive / comments" },
+      "body_text": { "hex": "#a6accd", "role": "Body text" },
+      "bright_text": { "hex": "#ffffff", "role": "Titles / active" },
+      "accent": {
+        "hex": "#c792ea",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#82aaff", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Catppuccin Mocha",
+    "palette": "Material Darker",
     "colors": {
-      "true_black":    { "hex": "#11111b", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#181825", "role": "Primary bg" },
-      "surface":       { "hex": "#1e1e2e", "role": "Windows / panels" },
-      "elevated":      { "hex": "#313244", "role": "Statusbar / popups" },
-      "border":        { "hex": "#45475a", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#6c7086", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#cdd6f4", "role": "Body text" },
-      "bright_text":   { "hex": "#f5e0dc", "role": "Titles / active" },
-      "accent":        { "hex": "#cba6f7", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#89b4fa", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#0f1114", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#1b1b1b", "role": "Primary bg" },
+      "surface": { "hex": "#212121", "role": "Windows / panels" },
+      "elevated": { "hex": "#2f2f2f", "role": "Statusbar / popups" },
+      "border": { "hex": "#424242", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#616161", "role": "Inactive / comments" },
+      "body_text": { "hex": "#eeffff", "role": "Body text" },
+      "bright_text": { "hex": "#ffffff", "role": "Titles / active" },
+      "accent": {
+        "hex": "#80cbc4",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#c3e88d", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Tokyo Night",
+    "palette": "Ayu Dark",
     "colors": {
-      "true_black":    { "hex": "#0a0a14", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#15161e", "role": "Primary bg" },
-      "surface":       { "hex": "#1a1b26", "role": "Windows / panels" },
-      "elevated":      { "hex": "#24283b", "role": "Statusbar / popups" },
-      "border":        { "hex": "#32344a", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#565f89", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#c0caf5", "role": "Body text" },
-      "bright_text":   { "hex": "#e9e9f9", "role": "Titles / active" },
-      "accent":        { "hex": "#7aa2f7", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#bb9af7", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#06080a", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#0b0e14", "role": "Primary bg" },
+      "surface": { "hex": "#131721", "role": "Windows / panels" },
+      "elevated": { "hex": "#1b1f29", "role": "Statusbar / popups" },
+      "border": { "hex": "#2d3640", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#565b66", "role": "Inactive / comments" },
+      "body_text": { "hex": "#bfbdb6", "role": "Body text" },
+      "bright_text": { "hex": "#f3f4f5", "role": "Titles / active" },
+      "accent": {
+        "hex": "#e6b450",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#39bae6", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Dracula",
+    "palette": "Ayu Mirage",
     "colors": {
-      "true_black":    { "hex": "#0e0e11", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#1e1e24", "role": "Primary bg" },
-      "surface":       { "hex": "#282a36", "role": "Windows / panels" },
-      "elevated":      { "hex": "#343a40", "role": "Statusbar / popups" },
-      "border":        { "hex": "#44475a", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#6272a4", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#f8f8f2", "role": "Body text" },
-      "bright_text":   { "hex": "#ffffff", "role": "Titles / active" },
-      "accent":        { "hex": "#bd93f9", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#ff79c6", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#141821", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#1f2430", "role": "Primary bg" },
+      "surface": { "hex": "#242936", "role": "Windows / panels" },
+      "elevated": { "hex": "#2d3441", "role": "Statusbar / popups" },
+      "border": { "hex": "#3e4b59", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#707a8c", "role": "Inactive / comments" },
+      "body_text": { "hex": "#cccac2", "role": "Body text" },
+      "bright_text": { "hex": "#f3f4f5", "role": "Titles / active" },
+      "accent": {
+        "hex": "#ffcc66",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#73d0ff", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Everforest Dark",
+    "palette": "Ayu Light",
     "colors": {
-      "true_black":    { "hex": "#1e2326", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#272e33", "role": "Primary bg" },
-      "surface":       { "hex": "#2e383c", "role": "Windows / panels" },
-      "elevated":      { "hex": "#3a4549", "role": "Statusbar / popups" },
-      "border":        { "hex": "#4d5a5f", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#7a8a8f", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#d3c6aa", "role": "Body text" },
-      "bright_text":   { "hex": "#efebd4", "role": "Titles / active" },
-      "accent":        { "hex": "#a7c080", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#83c092", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#fcfcfc", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#fcfcfc", "role": "Primary bg" },
+      "surface": { "hex": "#f8f9fa", "role": "Windows / panels" },
+      "elevated": { "hex": "#ececed", "role": "Statusbar / popups" },
+      "border": { "hex": "#d9d8d7", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#abb0b6", "role": "Inactive / comments" },
+      "body_text": { "hex": "#5c6166", "role": "Body text" },
+      "bright_text": { "hex": "#1f2430", "role": "Titles / active" },
+      "accent": {
+        "hex": "#fa8d3e",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#399ee6", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Rosé Pine",
+    "palette": "Tokyo Night Storm",
     "colors": {
-      "true_black":    { "hex": "#191724", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#1f1d2e", "role": "Primary bg" },
-      "surface":       { "hex": "#26233a", "role": "Windows / panels" },
-      "elevated":      { "hex": "#2a2740", "role": "Statusbar / popups" },
-      "border":        { "hex": "#3b3752", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#6e6a86", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#e0def4", "role": "Body text" },
-      "bright_text":   { "hex": "#f5f0f7", "role": "Titles / active" },
-      "accent":        { "hex": "#c4a7e7", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#ebbcba", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#1a1b26", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#1f2335", "role": "Primary bg" },
+      "surface": { "hex": "#24283b", "role": "Windows / panels" },
+      "elevated": { "hex": "#292e42", "role": "Statusbar / popups" },
+      "border": { "hex": "#3b4261", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#565f89", "role": "Inactive / comments" },
+      "body_text": { "hex": "#c0caf5", "role": "Body text" },
+      "bright_text": { "hex": "#e9e9f9", "role": "Titles / active" },
+      "accent": {
+        "hex": "#7aa2f7",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#bb9af7", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Light Solarized",
+    "palette": "Tokyo Night Day",
     "colors": {
-      "true_black":    { "hex": "#fdf6e3", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#fdf6e3", "role": "Primary bg" },
-      "surface":       { "hex": "#f0e7d8", "role": "Windows / panels" },
-      "elevated":      { "hex": "#e9e2d2", "role": "Statusbar / popups" },
-      "border":        { "hex": "#d3cbb8", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#93a1a1", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#657b83", "role": "Body text" },
-      "bright_text":   { "hex": "#002b36", "role": "Titles / active" },
-      "accent":        { "hex": "#268bd2", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#2aa198", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#d0d5e3", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#e1e2e7", "role": "Primary bg" },
+      "surface": { "hex": "#e9e9ec", "role": "Windows / panels" },
+      "elevated": { "hex": "#d4d6e4", "role": "Statusbar / popups" },
+      "border": { "hex": "#b6bcd4", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#848cb5", "role": "Inactive / comments" },
+      "body_text": { "hex": "#3760bf", "role": "Body text" },
+      "bright_text": { "hex": "#1e2030", "role": "Titles / active" },
+      "accent": {
+        "hex": "#2e7de9",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#9854f1", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Light Gruvbox",
+    "palette": "Rosé Pine Moon",
     "colors": {
-      "true_black":    { "hex": "#fbf1c7", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#fbf1c7", "role": "Primary bg" },
-      "surface":       { "hex": "#ebdbb2", "role": "Windows / panels" },
-      "elevated":      { "hex": "#d5c4a1", "role": "Statusbar / popups" },
-      "border":        { "hex": "#bdae93", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#a89984", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#665c54", "role": "Body text" },
-      "bright_text":   { "hex": "#282828", "role": "Titles / active" },
-      "accent":        { "hex": "#d79921", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#fabd2f", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#1b1a2e", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#232136", "role": "Primary bg" },
+      "surface": { "hex": "#2a273f", "role": "Windows / panels" },
+      "elevated": { "hex": "#393552", "role": "Statusbar / popups" },
+      "border": { "hex": "#44415a", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#6e6a86", "role": "Inactive / comments" },
+      "body_text": { "hex": "#e0def4", "role": "Body text" },
+      "bright_text": { "hex": "#f5f0f7", "role": "Titles / active" },
+      "accent": {
+        "hex": "#c4a7e7",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#ea9a97", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Blood Moon",
+    "palette": "Rosé Pine Dawn",
     "colors": {
-      "true_black":    { "hex": "#110000", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#1a0505", "role": "Primary bg" },
-      "surface":       { "hex": "#240a0a", "role": "Windows / panels" },
-      "elevated":      { "hex": "#301212", "role": "Statusbar / popups" },
-      "border":        { "hex": "#4a2020", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#8b5555", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#d4a0a0", "role": "Body text" },
-      "bright_text":   { "hex": "#f5d0d0", "role": "Titles / active" },
-      "accent":        { "hex": "#e63946", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#a61e2d", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#f2e9e1", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#faf4ed", "role": "Primary bg" },
+      "surface": { "hex": "#fffaf3", "role": "Windows / panels" },
+      "elevated": { "hex": "#f4ede8", "role": "Statusbar / popups" },
+      "border": { "hex": "#dfdad9", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#9893a5", "role": "Inactive / comments" },
+      "body_text": { "hex": "#575279", "role": "Body text" },
+      "bright_text": { "hex": "#2d2a3e", "role": "Titles / active" },
+      "accent": {
+        "hex": "#907aa9",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#d7827e", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Ocean Deep",
+    "palette": "Everforest Light",
     "colors": {
-      "true_black":    { "hex": "#040b14", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#0a1525", "role": "Primary bg" },
-      "surface":       { "hex": "#112236", "role": "Windows / panels" },
-      "elevated":      { "hex": "#1a3048", "role": "Statusbar / popups" },
-      "border":        { "hex": "#2a4a6e", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#5f8ab5", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#a8d0e6", "role": "Body text" },
-      "bright_text":   { "hex": "#e3f0f7", "role": "Titles / active" },
-      "accent":        { "hex": "#48b5e3", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#2278a3", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#fffbef", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#fdf6e3", "role": "Primary bg" },
+      "surface": { "hex": "#f4f0d9", "role": "Windows / panels" },
+      "elevated": { "hex": "#efebd4", "role": "Statusbar / popups" },
+      "border": { "hex": "#e0dcc7", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#939f91", "role": "Inactive / comments" },
+      "body_text": { "hex": "#5c6a72", "role": "Body text" },
+      "bright_text": { "hex": "#3a464c", "role": "Titles / active" },
+      "accent": {
+        "hex": "#8da101",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#35a77c", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Forest Night",
+    "palette": "Kanagawa Wave",
     "colors": {
-      "true_black":    { "hex": "#0a120a", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#0f1a0f", "role": "Primary bg" },
-      "surface":       { "hex": "#162616", "role": "Windows / panels" },
-      "elevated":      { "hex": "#1f331f", "role": "Statusbar / popups" },
-      "border":        { "hex": "#2d4f2d", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#6b926b", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#b8d0b8", "role": "Body text" },
-      "bright_text":   { "hex": "#e8f0e8", "role": "Titles / active" },
-      "accent":        { "hex": "#6db86d", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#368036", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#16161d", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#1f1f28", "role": "Primary bg" },
+      "surface": { "hex": "#2a2a37", "role": "Windows / panels" },
+      "elevated": { "hex": "#363646", "role": "Statusbar / popups" },
+      "border": { "hex": "#54546d", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#727169", "role": "Inactive / comments" },
+      "body_text": { "hex": "#dcd7ba", "role": "Body text" },
+      "bright_text": { "hex": "#f2ecbc", "role": "Titles / active" },
+      "accent": {
+        "hex": "#7e9cd8",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#957fb8", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Retro Wave",
+    "palette": "Night Owl",
     "colors": {
-      "true_black":    { "hex": "#0a0a1a", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#12122a", "role": "Primary bg" },
-      "surface":       { "hex": "#1c1c3a", "role": "Windows / panels" },
-      "elevated":      { "hex": "#26264a", "role": "Statusbar / popups" },
-      "border":        { "hex": "#3a3a60", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#7a7aaa", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#c0c0e0", "role": "Body text" },
-      "bright_text":   { "hex": "#f0f0ff", "role": "Titles / active" },
-      "accent":        { "hex": "#ff00ff", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#cc00cc", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#010e1a", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#011627", "role": "Primary bg" },
+      "surface": { "hex": "#0b2942", "role": "Windows / panels" },
+      "elevated": { "hex": "#13344f", "role": "Statusbar / popups" },
+      "border": { "hex": "#1d3b53", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#637777", "role": "Inactive / comments" },
+      "body_text": { "hex": "#d6deeb", "role": "Body text" },
+      "bright_text": { "hex": "#ffffff", "role": "Titles / active" },
+      "accent": {
+        "hex": "#82aaff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#c792ea", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Midnight Coffee",
+    "palette": "Synthwave '84",
     "colors": {
-      "true_black":    { "hex": "#0c0a0a", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#161312", "role": "Primary bg" },
-      "surface":       { "hex": "#221e1c", "role": "Windows / panels" },
-      "elevated":      { "hex": "#2e2a27", "role": "Statusbar / popups" },
-      "border":        { "hex": "#443e3a", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#8a817a", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#cdc4bc", "role": "Body text" },
-      "bright_text":   { "hex": "#f5efe8", "role": "Titles / active" },
-      "accent":        { "hex": "#c99f6e", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#a67c46", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#191326", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#241b2f", "role": "Primary bg" },
+      "surface": { "hex": "#2a2139", "role": "Windows / panels" },
+      "elevated": { "hex": "#34294f", "role": "Statusbar / popups" },
+      "border": { "hex": "#495495", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#848bbd", "role": "Inactive / comments" },
+      "body_text": { "hex": "#f8f8f2", "role": "Body text" },
+      "bright_text": { "hex": "#ffffff", "role": "Titles / active" },
+      "accent": {
+        "hex": "#ff7edb",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#36f9f6", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Arctic Frost",
+    "palette": "Oceanic Next",
     "colors": {
-      "true_black":    { "hex": "#0a141f", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#122336", "role": "Primary bg" },
-      "surface":       { "hex": "#1b324c", "role": "Windows / panels" },
-      "elevated":      { "hex": "#244263", "role": "Statusbar / popups" },
-      "border":        { "hex": "#355c84", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#7ea3c4", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#cde3f5", "role": "Body text" },
-      "bright_text":   { "hex": "#f0f8ff", "role": "Titles / active" },
-      "accent":        { "hex": "#8bcbff", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#4a9fd6", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#121b21", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#1b2b34", "role": "Primary bg" },
+      "surface": { "hex": "#203441", "role": "Windows / panels" },
+      "elevated": { "hex": "#253b48", "role": "Statusbar / popups" },
+      "border": { "hex": "#343d46", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#65737e", "role": "Inactive / comments" },
+      "body_text": { "hex": "#cdd3de", "role": "Body text" },
+      "bright_text": { "hex": "#d8dee9", "role": "Titles / active" },
+      "accent": {
+        "hex": "#6699cc",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#5fb3b3", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Amber Glow",
+    "palette": "Horizon",
     "colors": {
-      "true_black":    { "hex": "#120c04", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#1c1509", "role": "Primary bg" },
-      "surface":       { "hex": "#2a2010", "role": "Windows / panels" },
-      "elevated":      { "hex": "#3a2c18", "role": "Statusbar / popups" },
-      "border":        { "hex": "#5a4428", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#b08a5a", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#e6c88a", "role": "Body text" },
-      "bright_text":   { "hex": "#fff0c0", "role": "Titles / active" },
-      "accent":        { "hex": "#ffb347", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#cc8820", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#16151d", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#1a1c23", "role": "Primary bg" },
+      "surface": { "hex": "#1c1e26", "role": "Windows / panels" },
+      "elevated": { "hex": "#232530", "role": "Statusbar / popups" },
+      "border": { "hex": "#2e303e", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#6c6f93", "role": "Inactive / comments" },
+      "body_text": { "hex": "#d5d8da", "role": "Body text" },
+      "bright_text": { "hex": "#fdf0ed", "role": "Titles / active" },
+      "accent": {
+        "hex": "#e95678",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#fab795", "role": "Inactive border / unfocused" }
     }
   },
   {
-    "palette": "Lavender Dream",
+    "palette": "Zenburn",
     "colors": {
-      "true_black":    { "hex": "#0e0a14", "role": "Wallpaper / deep bg" },
-      "vanta_ui":      { "hex": "#161222", "role": "Primary bg" },
-      "surface":       { "hex": "#201c30", "role": "Windows / panels" },
-      "elevated":      { "hex": "#2c2840", "role": "Statusbar / popups" },
-      "border":        { "hex": "#403a5a", "role": "Borders / dividers" },
-      "muted_text":    { "hex": "#8a84aa", "role": "Inactive / comments" },
-      "body_text":     { "hex": "#cfcaf0", "role": "Body text" },
-      "bright_text":   { "hex": "#f0ecff", "role": "Titles / active" },
-      "accent":        { "hex": "#b69fff", "role": "Active border / highlight / focus" },
-      "accent_dim":    { "hex": "#8b6dd4", "role": "Inactive border / unfocused" }
+      "true_black": { "hex": "#1f1f1f", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#3f3f3f", "role": "Primary bg" },
+      "surface": { "hex": "#464646", "role": "Windows / panels" },
+      "elevated": { "hex": "#4f4f4f", "role": "Statusbar / popups" },
+      "border": { "hex": "#5f5f5f", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#7f9f7f", "role": "Inactive / comments" },
+      "body_text": { "hex": "#dcdccc", "role": "Body text" },
+      "bright_text": { "hex": "#ffffff", "role": "Titles / active" },
+      "accent": {
+        "hex": "#f0dfaf",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#8cd0d3", "role": "Inactive border / unfocused" }
+    }
+  },
+  {
+    "palette": "Gotham",
+    "colors": {
+      "true_black": { "hex": "#0a0f14", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#0c1014", "role": "Primary bg" },
+      "surface": { "hex": "#11151c", "role": "Windows / panels" },
+      "elevated": { "hex": "#091f2e", "role": "Statusbar / popups" },
+      "border": { "hex": "#093748", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#245361", "role": "Inactive / comments" },
+      "body_text": { "hex": "#99d1ce", "role": "Body text" },
+      "bright_text": { "hex": "#d3ebe9", "role": "Titles / active" },
+      "accent": {
+        "hex": "#26a98b",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#edb54b", "role": "Inactive border / unfocused" }
+    }
+  },
+  {
+    "palette": "Cobalt2",
+    "colors": {
+      "true_black": { "hex": "#0d2231", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#15232d", "role": "Primary bg" },
+      "surface": { "hex": "#193549", "role": "Windows / panels" },
+      "elevated": { "hex": "#1f4662", "role": "Statusbar / popups" },
+      "border": { "hex": "#234e6d", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#627e97", "role": "Inactive / comments" },
+      "body_text": { "hex": "#e1efff", "role": "Body text" },
+      "bright_text": { "hex": "#ffffff", "role": "Titles / active" },
+      "accent": {
+        "hex": "#ffc600",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#ff9d00", "role": "Inactive border / unfocused" }
+    }
+  },
+  {
+    "palette": "GitHub Dark",
+    "colors": {
+      "true_black": { "hex": "#010409", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#0d1117", "role": "Primary bg" },
+      "surface": { "hex": "#161b22", "role": "Windows / panels" },
+      "elevated": { "hex": "#21262d", "role": "Statusbar / popups" },
+      "border": { "hex": "#30363d", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#8b949e", "role": "Inactive / comments" },
+      "body_text": { "hex": "#c9d1d9", "role": "Body text" },
+      "bright_text": { "hex": "#f0f6fc", "role": "Titles / active" },
+      "accent": {
+        "hex": "#58a6ff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#1f6feb", "role": "Inactive border / unfocused" }
+    }
+  },
+  {
+    "palette": "GitHub Light",
+    "colors": {
+      "true_black": { "hex": "#ffffff", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#ffffff", "role": "Primary bg" },
+      "surface": { "hex": "#f6f8fa", "role": "Windows / panels" },
+      "elevated": { "hex": "#eaeef2", "role": "Statusbar / popups" },
+      "border": { "hex": "#d0d7de", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#6e7781", "role": "Inactive / comments" },
+      "body_text": { "hex": "#24292f", "role": "Body text" },
+      "bright_text": { "hex": "#1f2328", "role": "Titles / active" },
+      "accent": {
+        "hex": "#0969da",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#218bff", "role": "Inactive border / unfocused" }
+    }
+  },
+  {
+    "palette": "Tomorrow Night",
+    "colors": {
+      "true_black": { "hex": "#191919", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#1d1f21", "role": "Primary bg" },
+      "surface": { "hex": "#282a2e", "role": "Windows / panels" },
+      "elevated": { "hex": "#313337", "role": "Statusbar / popups" },
+      "border": { "hex": "#373b41", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#969896", "role": "Inactive / comments" },
+      "body_text": { "hex": "#c5c8c6", "role": "Body text" },
+      "bright_text": { "hex": "#ffffff", "role": "Titles / active" },
+      "accent": {
+        "hex": "#81a2be",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#b294bb", "role": "Inactive border / unfocused" }
+    }
+  },
+  {
+    "palette": "Iceberg",
+    "colors": {
+      "true_black": { "hex": "#0f1117", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#161821", "role": "Primary bg" },
+      "surface": { "hex": "#1e2132", "role": "Windows / panels" },
+      "elevated": { "hex": "#242940", "role": "Statusbar / popups" },
+      "border": { "hex": "#2a3158", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#6b7089", "role": "Inactive / comments" },
+      "body_text": { "hex": "#c6c8d1", "role": "Body text" },
+      "bright_text": { "hex": "#e8e9ec", "role": "Titles / active" },
+      "accent": {
+        "hex": "#84a0c6",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#a093c7", "role": "Inactive border / unfocused" }
+    }
+  },
+  {
+    "palette": "Nightfox",
+    "colors": {
+      "true_black": { "hex": "#131a24", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#192330", "role": "Primary bg" },
+      "surface": { "hex": "#212e3f", "role": "Windows / panels" },
+      "elevated": { "hex": "#29394f", "role": "Statusbar / popups" },
+      "border": { "hex": "#39506d", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#71839b", "role": "Inactive / comments" },
+      "body_text": { "hex": "#cdcecf", "role": "Body text" },
+      "bright_text": { "hex": "#dfdfe0", "role": "Titles / active" },
+      "accent": {
+        "hex": "#719cd6",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#9d79d6", "role": "Inactive border / unfocused" }
+    }
+  },
+  {
+    "palette": "Melange Dark",
+    "colors": {
+      "true_black": { "hex": "#1f1b19", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#292522", "role": "Primary bg" },
+      "surface": { "hex": "#34302c", "role": "Windows / panels" },
+      "elevated": { "hex": "#403a36", "role": "Statusbar / popups" },
+      "border": { "hex": "#4d4641", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#867462", "role": "Inactive / comments" },
+      "body_text": { "hex": "#ece1d7", "role": "Body text" },
+      "bright_text": { "hex": "#f1f1f1", "role": "Titles / active" },
+      "accent": {
+        "hex": "#ebc06d",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#85b695", "role": "Inactive border / unfocused" }
+    }
+  },
+  {
+    "palette": "Nord Light",
+    "colors": {
+      "true_black": { "hex": "#eceff4", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#eceff4", "role": "Primary bg" },
+      "surface": { "hex": "#e5e9f0", "role": "Windows / panels" },
+      "elevated": { "hex": "#d8dee9", "role": "Statusbar / popups" },
+      "border": { "hex": "#c2ccd9", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#7b88a1", "role": "Inactive / comments" },
+      "body_text": { "hex": "#3b4252", "role": "Body text" },
+      "bright_text": { "hex": "#2e3440", "role": "Titles / active" },
+      "accent": {
+        "hex": "#5e81ac",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#88c0d0", "role": "Inactive border / unfocused" }
+    }
+  },
+  {
+    "palette": "Poimandres",
+    "colors": {
+      "true_black": { "hex": "#171922", "role": "Wallpaper / deep bg" },
+      "vanta_ui": { "hex": "#1b1e28", "role": "Primary bg" },
+      "surface": { "hex": "#252b37", "role": "Windows / panels" },
+      "elevated": { "hex": "#303340", "role": "Statusbar / popups" },
+      "border": { "hex": "#3b4255", "role": "Borders / dividers" },
+      "muted_text": { "hex": "#767c9d", "role": "Inactive / comments" },
+      "body_text": { "hex": "#a6accd", "role": "Body text" },
+      "bright_text": { "hex": "#e4f0fb", "role": "Titles / active" },
+      "accent": {
+        "hex": "#5de4c7",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": { "hex": "#89ddff", "role": "Inactive border / unfocused" }
+    }
+  },
+    {
+    "palette": "Mono Black",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#080808",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#101010",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#191919",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#282828",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6e6e6e",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c2",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededed",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ffffff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#4a4a4a",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Base16 Default Dark",
+    "colors": {
+      "true_black": {
+        "hex": "#0c0c0c",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#181818",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#1d1d1d",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#262626",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#383838",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#585858",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#d8d8d8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#f8f8f8",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#7cafc2",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#ba8baf",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Base16 Default Light",
+    "colors": {
+      "true_black": {
+        "hex": "#fbfbfb",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#f8f8f8",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#f2f2f2",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#e8e8e8",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#d4d4d4",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#b8b8b8",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#383838",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#181818",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#7cafc2",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#ba8baf",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Nightfly",
+    "colors": {
+      "true_black": {
+        "hex": "#010b14",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#011627",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#011b30",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#02233e",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#02345c",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#637777",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c3ccdc",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ecf0f1",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#82aaff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#c792ea",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Moonfly",
+    "colors": {
+      "true_black": {
+        "hex": "#040404",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#080808",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0a0a0a",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#0d0d0d",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#131313",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#7e8294",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#bdbdbd",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#eeeeee",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#80a0ff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#ae81ff",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Oxocarbon Dark",
+    "colors": {
+      "true_black": {
+        "hex": "#0b0b0b",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#161616",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#1b1b1b",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#232323",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#343434",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6f6f6f",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#f2f4f8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ffffff",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#33b1ff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#be95ff",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Oxocarbon Light",
+    "colors": {
+      "true_black": {
+        "hex": "#f6f7fa",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#f2f4f8",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#eaedf4",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#dde2ed",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#c4cddf",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#a2a9b0",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#343a3f",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#161616",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#0f62fe",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#8a3ffc",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Duskfox",
+    "colors": {
+      "true_black": {
+        "hex": "#12111c",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#232136",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#2b2842",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#373455",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#524e7f",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6e6a86",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#e0def4",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#f5f0f7",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#a485dd",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#eb6f92",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Dawnfox",
+    "colors": {
+      "true_black": {
+        "hex": "#fbf7f2",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#faf4ed",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#f7eee3",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#f3e5d4",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#ebd2b6",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#9893a5",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#575279",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#2d2a3e",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#286983",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#d7827e",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Carbonfox",
+    "colors": {
+      "true_black": {
+        "hex": "#0b0b0b",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#161616",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#1b1b1b",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#232323",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#343434",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6f6f6f",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#f2f4f8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ffffff",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#78a9ff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#be95ff",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Terafox",
+    "colors": {
+      "true_black": {
+        "hex": "#0b1315",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#152528",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#1a2d31",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#213a3f",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#31575e",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#587b7b",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#e6eaea",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#f7f8f8",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#5a93aa",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#a1cdd8",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "PaperColor Dark",
+    "colors": {
+      "true_black": {
+        "hex": "#0f0f0f",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#1c1c1c",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#222222",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#2c2c2c",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#424242",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#878787",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#d0d0d0",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ffffff",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#5faf00",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#00afaf",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "PaperColor Light",
+    "colors": {
+      "true_black": {
+        "hex": "#f1f1f1",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#eeeeee",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#e8e8e8",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#dfdfdf",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#cbcbcb",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#878787",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#444444",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#005f87",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#0087af",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#d70087",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Seoul256 Dark",
+    "colors": {
+      "true_black": {
+        "hex": "#1e1e1e",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#3a3a3a",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#474747",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#5c5c5c",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#888888",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#8a8a8a",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#d0d0d0",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ffffff",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#719872",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#98bcbd",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Seoul256 Light",
+    "colors": {
+      "true_black": {
+        "hex": "#e7e7e7",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#e4e4e4",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#dedede",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#d5d5d5",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#c3c3c3",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#949494",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#4e4e4e",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#262626",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#0087af",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#af5f5f",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Apprentice",
+    "colors": {
+      "true_black": {
+        "hex": "#141414",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#262626",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#2e2e2e",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#3c3c3c",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#595959",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6c6c6c",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#bcbcbc",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ffffff",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#5f87af",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#87af87",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Jellybeans",
+    "colors": {
+      "true_black": {
+        "hex": "#0b0b0b",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#151515",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#1a1a1a",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#212121",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#313131",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#888888",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#e8e8d3",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ffffff",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#8fbfdc",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#99ad6a",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Wombat",
+    "colors": {
+      "true_black": {
+        "hex": "#131313",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#242424",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#2c2c2c",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#393939",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#555555",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#857b6f",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#e3e0d7",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#f6f3e8",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#88b8f6",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#95e454",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Spacemacs Dark",
+    "colors": {
+      "true_black": {
+        "hex": "#151618",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#292b2e",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#323438",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#414449",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#60656c",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#5d4d7a",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#b2b2b2",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#e8e8e8",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#4f97d7",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#bc6ec5",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Darcula",
+    "colors": {
+      "true_black": {
+        "hex": "#161616",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#2b2b2b",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#343434",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#444444",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#656565",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#808080",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#a9b7c6",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ffffff",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#cc7832",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#6a8759",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Xcode Dark",
+    "colors": {
+      "true_black": {
+        "hex": "#101013",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#1f1f24",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#26262c",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#313139",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#494955",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6c7986",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#dfdfe0",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ffffff",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#4eb0cc",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#d9c97c",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Xcode Light",
+    "colors": {
+      "true_black": {
+        "hex": "#fefefe",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#fefefe",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#f9f9f9",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#eeeeee",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#dadada",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#8a99a6",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#262626",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#000000",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#0f68a0",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#ad3da4",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Vitesse Dark",
+    "colors": {
+      "true_black": {
+        "hex": "#090909",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#121212",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#161616",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#1c1c1c",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#2a2a2a",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#758575",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#dbd7ca",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ffffff",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#4d9375",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#6394bf",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Vitesse Light",
+    "colors": {
+      "true_black": {
+        "hex": "#fefefe",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#fefefe",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#f9f9f9",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#eeeeee",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#dadada",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#a0ada0",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#393a34",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#121212",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#1e754f",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#2e808f",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Vesper",
+    "colors": {
+      "true_black": {
+        "hex": "#080808",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#101010",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#141414",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#191919",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262626",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#8b8b8b",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#ffffff",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ffffff",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ffc799",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#99ffe4",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Flexoki Dark",
+    "colors": {
+      "true_black": {
+        "hex": "#080808",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#100f0f",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#141212",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#191818",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262323",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#878580",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#cecdc3",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#fffcf0",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#d0a215",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#4385be",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Flexoki Light",
+    "colors": {
+      "true_black": {
+        "hex": "#fffdf6",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#fffcf0",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#fffae4",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#fff6d0",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#ffeea8",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#b7b5ac",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#100f0f",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#1c1b1a",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ad8301",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#205ea6",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Modus Vivendi",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#000000",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#000000",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#000000",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#000000",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#989898",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#ffffff",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ffffff",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#79a8ff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#00d3d0",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Modus Operandi",
+    "colors": {
+      "true_black": {
+        "hex": "#fefefe",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#fefefe",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#f9f9f9",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#eeeeee",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#dadada",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#595959",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#000000",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#000000",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#3548cf",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#0031a9",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Sonokai",
+    "colors": {
+      "true_black": {
+        "hex": "#17181b",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#2c2e34",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#36383f",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#464952",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#676c7a",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#7f8490",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#e2e2e3",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ffffff",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#9ed072",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#76cce0",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Panda",
+    "colors": {
+      "true_black": {
+        "hex": "#151616",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#292a2b",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#323334",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#414244",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#606365",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#757575",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#e6e6e6",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ffffff",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ff75b5",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#19f9d8",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Shades of Purple",
+    "colors": {
+      "true_black": {
+        "hex": "#17162c",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#2d2b55",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#373468",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#474486",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#7774b9",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#a599e9",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#ffffff",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ffffff",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#fad000",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#9effff",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Aura Dark",
+    "colors": {
+      "true_black": {
+        "hex": "#0b0a0e",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#15141b",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#1a1821",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#21202b",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#312f3f",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6d6d6d",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#edecee",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ffffff",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#a277ff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#61ffca",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Rouge",
+    "colors": {
+      "true_black": {
+        "hex": "#0c1119",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#172030",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#1c273b",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#24334c",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#364b71",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6272a4",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c6c6c6",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#eaeaea",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#b4637a",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#7e9cd8",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Tokyo Night Moon",
+    "colors": {
+      "true_black": {
+        "hex": "#12131c",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#222436",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#292c42",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#363955",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#50557f",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#636da6",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c8d3f5",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#e4e9ff",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#82aaff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#c099ff",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Lackluster",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#000000",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#000000",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#000000",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#000000",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#555555",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#deeeed",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ffffff",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#789978",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#7788aa",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Bluloco Dark",
+    "colors": {
+      "true_black": {
+        "hex": "#15171b",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#282c34",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#31363f",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#3f4652",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#5e677a",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#636d83",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#abb2bf",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ffffff",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#3476ff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#d3503e",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Bluloco Light",
+    "colors": {
+      "true_black": {
+        "hex": "#fcfcfc",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#f9f9f9",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#f3f3f3",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#e9e9e9",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#d5d5d5",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#a0a1a7",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#383a42",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#000000",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#275fe4",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#d52753",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Winter is Coming",
+    "colors": {
+      "true_black": {
+        "hex": "#010b14",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#011627",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#011b30",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#02233e",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#02345c",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#5e7887",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#d6deeb",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ffffff",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#00bff9",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#c5e478",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Zenbones Dark",
+    "colors": {
+      "true_black": {
+        "hex": "#0f0d0c",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#1c1917",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#221e1c",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#2c2824",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#423b36",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#767a7a",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#b4bdc3",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#e9e9e9",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#8bae68",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#6099c0",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Melange Light",
+    "colors": {
+      "true_black": {
+        "hex": "#f4f4f4",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#f1f1f1",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#ebebeb",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#e1e1e1",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#cecece",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#a98a78",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#54433a",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#2c2621",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#6e9b72",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#a06d57",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Solarized Dark",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#268bd2",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#2aa198",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Gruvbox Dark",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#fabd2f",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#d79921",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Nord",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#88c0d0",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#5e81ac",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Catppuccin Mocha",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#cba6f7",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#89b4fa",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Tokyo Night",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#7aa2f7",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#bb9af7",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Dracula",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#bd93f9",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#ff79c6",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Everforest Dark",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#a7c080",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#83c092",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Rosé Pine",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#c4a7e7",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#ebbcba",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Light Solarized",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#268bd2",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#2aa198",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Light Gruvbox",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#d79921",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#fabd2f",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Blood Moon",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#e63946",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#a61e2d",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Ocean Deep",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#48b5e3",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#2278a3",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Forest Night",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#6db86d",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#368036",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Retro Wave",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ff00ff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#cc00cc",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Midnight Coffee",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#c99f6e",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#a67c46",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Arctic Frost",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#8bcbff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#4a9fd6",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Amber Glow",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ffb347",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#cc8820",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Lavender Dream",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#b69fff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#8b6dd4",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Catppuccin Latte",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#8839ef",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#1e66f5",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Catppuccin Frappé",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ca9ee6",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#8caaee",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Catppuccin Macchiato",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#c6a0f6",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#8aadf4",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Gruvbox Material",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#a9b665",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#89b482",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED One Dark",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#61afef",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#c678dd",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED One Light",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#4078f2",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#a626a4",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Monokai Pro",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ffd866",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#ff6188",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Monokai Classic",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#a6e22e",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#66d9ef",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Material Palenight",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#c792ea",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#82aaff",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Material Darker",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#80cbc4",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#c3e88d",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Ayu Dark",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#e6b450",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#39bae6",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Ayu Mirage",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ffcc66",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#73d0ff",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Ayu Light",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#fa8d3e",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#399ee6",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Tokyo Night Storm",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#7aa2f7",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#bb9af7",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Tokyo Night Day",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#2e7de9",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#9854f1",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Rosé Pine Moon",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#c4a7e7",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#ea9a97",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Rosé Pine Dawn",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#907aa9",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#d7827e",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Everforest Light",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#8da101",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#35a77c",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Kanagawa Wave",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#7e9cd8",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#957fb8",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Night Owl",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#82aaff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#c792ea",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Synthwave '84",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ff7edb",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#36f9f6",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Oceanic Next",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#6699cc",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#5fb3b3",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Horizon",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#e95678",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#fab795",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Zenburn",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#f0dfaf",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#8cd0d3",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Gotham",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#26a98b",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#edb54b",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Cobalt2",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ffc600",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#ff9d00",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED GitHub Dark",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#58a6ff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#1f6feb",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED GitHub Light",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#0969da",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#218bff",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Tomorrow Night",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#81a2be",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#b294bb",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Iceberg",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#84a0c6",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#a093c7",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Nightfox",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#719cd6",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#9d79d6",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Melange Dark",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ebc06d",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#85b695",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Nord Light",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#5e81ac",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#88c0d0",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "OLED Poimandres",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#070708",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0f11",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17171a",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#262629",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6b6b73",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf2",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#5de4c7",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#89ddff",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Crimson Void",
+    "colors": {
+      "true_black": {
+        "hex": "#080304",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#110809",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#1c0e0f",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#271617",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#3c2527",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#836365",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#cec0c1",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#f0eded",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ed5e6a",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#b12531",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Scarlet Void",
+    "colors": {
+      "true_black": {
+        "hex": "#080403",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#110908",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#1c100e",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#271816",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#3c2825",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#836763",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#cec2c0",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#f0eded",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ed715e",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#b13825",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Ember Void",
+    "colors": {
+      "true_black": {
+        "hex": "#080503",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#110a08",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#1c120e",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#271b16",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#3c2c25",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#836c63",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#cec4c0",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#f0eeed",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ed895e",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#b14f25",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Amber Void",
+    "colors": {
+      "true_black": {
+        "hex": "#080603",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#110d08",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#1c160e",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#272016",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#3c3225",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#837563",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#cec8c0",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#f0efed",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#edaf5e",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#b17425",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Gold Void",
+    "colors": {
+      "true_black": {
+        "hex": "#080703",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#110f08",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#1c180e",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#272316",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#3c3725",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#837b63",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#cecac0",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#f0efed",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#edcc5e",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#b19025",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Citron Void",
+    "colors": {
+      "true_black": {
+        "hex": "#080803",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#101108",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#1b1c0e",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#272716",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#3b3c25",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#828363",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#cdcec0",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#f0f0ed",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#e8ed5e",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#acb125",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Lime Void",
+    "colors": {
+      "true_black": {
+        "hex": "#060803",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#0d1108",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#151c0e",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#1f2716",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#313c25",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#748363",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c7cec0",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#eff0ed",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#abed5e",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#70b125",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Fern Void",
+    "colors": {
+      "true_black": {
+        "hex": "#040803",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#091108",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#101c0e",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#192716",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#293c25",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#688363",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2cec0",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#eef0ed",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#76ed5e",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#3db125",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Jade Void",
+    "colors": {
+      "true_black": {
+        "hex": "#030805",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#08110b",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0e1c13",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#16271c",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#253c2d",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#63836e",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c0cec5",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#edf0ee",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#5eed93",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#25b159",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Emerald Void",
+    "colors": {
+      "true_black": {
+        "hex": "#030806",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#08110d",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0e1c17",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#162721",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#253c34",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#638377",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c0cec9",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#edf0ef",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#5eedb9",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#25b17e",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Teal Void",
+    "colors": {
+      "true_black": {
+        "hex": "#030807",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#081110",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0e1c1a",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#162725",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#253c3a",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#638380",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c0cecc",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#edf0ef",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#5eeddf",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#25b1a3",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Aqua Void",
+    "colors": {
+      "true_black": {
+        "hex": "#030708",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#081011",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0e1a1c",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#162527",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#253a3c",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#638083",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c0ccce",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#edeff0",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#5edfed",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#25a3b1",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Cyan Void",
+    "colors": {
+      "true_black": {
+        "hex": "#030708",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#080f11",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0e191c",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#162427",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#25373c",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#637c83",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c0cbce",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#edeff0",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#5ed1ed",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#2595b1",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Azure Void",
+    "colors": {
+      "true_black": {
+        "hex": "#030608",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#080d11",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0e161c",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#162027",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#25333c",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#637683",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c0c8ce",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#edeff0",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#5eb4ed",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#2579b1",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Cobalt Void",
+    "colors": {
+      "true_black": {
+        "hex": "#030508",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#080b11",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0e131c",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#161c27",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#252d3c",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#636e83",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c0c5ce",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#edeef0",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#5e93ed",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#2559b1",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Sapphire Void",
+    "colors": {
+      "true_black": {
+        "hex": "#030408",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#080a11",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0e111c",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#161927",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#25293c",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#636983",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c0c3ce",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#edeef0",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#5e7bed",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#2541b1",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Indigo Void",
+    "colors": {
+      "true_black": {
+        "hex": "#040308",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#080811",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f0e1c",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#171627",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#26253c",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#656383",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c1c0ce",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededf0",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#685eed",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#2f25b1",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Violet Void",
+    "colors": {
+      "true_black": {
+        "hex": "#050308",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#0b0811",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#130e1c",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#1c1627",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#2d253c",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6e6383",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c5c0ce",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#eeedf0",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#935eed",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#5925b1",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Amethyst Void",
+    "colors": {
+      "true_black": {
+        "hex": "#060308",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#0d0811",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#170e1c",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#211627",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#34253c",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#776383",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c9c0ce",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#efedf0",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#b95eed",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#7e25b1",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Orchid Void",
+    "colors": {
+      "true_black": {
+        "hex": "#070308",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#0f0811",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#1a0e1c",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#251627",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#39253c",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#7f6383",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#ccc0ce",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#efedf0",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#da5eed",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#9e25b1",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Magenta Void",
+    "colors": {
+      "true_black": {
+        "hex": "#080307",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#11080f",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#1c0e1a",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#271625",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#3c2539",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#83637f",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#cec0cc",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#f0edef",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ed5eda",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#b1259e",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Fuchsia Void",
+    "colors": {
+      "true_black": {
+        "hex": "#080306",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#11080d",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#1c0e17",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#271621",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#3c2534",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#836377",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#cec0c9",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#f0edef",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ed5eb9",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#b1257e",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Rose Void",
+    "colors": {
+      "true_black": {
+        "hex": "#080305",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#11080b",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#1c0e13",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#27161c",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#3c252d",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#83636e",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#cec0c5",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#f0edee",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ed5e93",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#b12559",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Mono Black",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#080808",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#101010",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#191919",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#282828",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6e6e6e",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c2c2c2",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ededed",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ffffff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#4a4a4a",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Mono Warm",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#090808",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#11100f",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#1b1917",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#2b2825",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#766d66",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c6c1be",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#eeedec",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ffffff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#4f4945",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Mono Cool",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#080809",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#0f1011",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#17191b",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#25272b",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#666d76",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#bec1c6",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#ecedee",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ffffff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#45494f",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Mono Soft",
+    "colors": {
+      "true_black": {
+        "hex": "#0b0b0b",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#141414",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#1c1c1c",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#242424",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#343434",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#7a7a7a",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#bebebe",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#e6e6e6",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ffffff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#555555",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Mono High Contrast",
+    "colors": {
+      "true_black": {
+        "hex": "#000000",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#080808",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#101010",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#191919",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#282828",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#6e6e6e",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#d1d1d1",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#fcfcfc",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ffffff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#4a4a4a",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Mono Sepia",
+    "colors": {
+      "true_black": {
+        "hex": "#040403",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#0e0c0a",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#161411",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#211d19",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#322d26",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#817463",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#c8c1b8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#edeae7",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ffffff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#584f44",
+        "role": "Inactive border / unfocused"
+      }
+    }
+  },
+  {
+    "palette": "Mono Slate",
+    "colors": {
+      "true_black": {
+        "hex": "#050506",
+        "role": "Wallpaper / deep bg"
+      },
+      "vanta_ui": {
+        "hex": "#0c0d0f",
+        "role": "Primary bg"
+      },
+      "surface": {
+        "hex": "#131517",
+        "role": "Windows / panels"
+      },
+      "elevated": {
+        "hex": "#1b1e21",
+        "role": "Statusbar / popups"
+      },
+      "border": {
+        "hex": "#282e32",
+        "role": "Borders / dividers"
+      },
+      "muted_text": {
+        "hex": "#677580",
+        "role": "Inactive / comments"
+      },
+      "body_text": {
+        "hex": "#bac2c8",
+        "role": "Body text"
+      },
+      "bright_text": {
+        "hex": "#e9ebed",
+        "role": "Titles / active"
+      },
+      "accent": {
+        "hex": "#ffffff",
+        "role": "Active border / highlight / focus"
+      },
+      "accent_dim": {
+        "hex": "#465058",
+        "role": "Inactive border / unfocused"
+      }
     }
   }
 ]

@@ -89,6 +89,102 @@ hl.window_rule({
 -- windowrulev2 = pin,      class:^(Rofi)$
 -- windowrulev2 = stayfullscreen, class:^(Rofi)$
 
+-- ── TUI popups (hosted in kitty via scripts/tui.sh) ─────────────────────────
+-- Sizes are tuned to the 11pt JetBrains Mono kitty font (~9x19 px per cell);
+-- adjust together with the size in each TUI's config if the font changes.
+-- Bar: 40px tall with 10px top margin, so popups anchored below it start at y=56.
+
+-- fsel — app launcher (centered, opened from waybar launcher / SUPER+x)
+hl.window_rule({
+	match = { class = "fsel" },
+	float = true,
+	pin = true,
+	size = "483 628",
+	center = true,
+})
+
+-- cclip — clipboard history (centered, SUPER+v); big enough for inline
+-- image previews and readable text rows (Alt+i opens the fullscreen preview)
+hl.window_rule({
+	match = { class = "cclip" },
+	float = true,
+	pin = true,
+	size = "700 560",
+	center = true,
+})
+
+-- powermenu — fsel dmenu power options (centered, SUPER+ALT+p)
+hl.window_rule({
+	match = { class = "powermenu" },
+	float = true,
+	pin = true,
+	size = "380 300",
+	center = true,
+})
+
+-- themepick — theme switcher via fsel dmenu (centered, SUPER+ALT+t)
+hl.window_rule({
+	match = { class = "themepick" },
+	float = true,
+	pin = true,
+	size = "330 460",
+	center = true,
+})
+
+-- wallpick — wallpaper picker via fsel dmenu (centered, SUPER+ALT+w)
+hl.window_rule({
+	match = { class = "wallpick" },
+	float = true,
+	pin = true,
+	size = "365 460",
+	center = true,
+})
+
+-- hexowl — calculator (centered, SUPER+equal)
+hl.window_rule({
+	match = { class = "hexowl" },
+	float = true,
+	pin = true,
+	size = "520 380",
+	center = true,
+})
+
+-- wiremix — audio mixer, opens under the waybar volume module (right side)
+hl.window_rule({
+	match = { class = "wiremix" },
+	float = true,
+	pin = true,
+	size = "610 510",
+	move = "1300 50",
+})
+
+-- linktui — wifi/eth/bluetooth, opens under the waybar network modules (right side)
+hl.window_rule({
+	match = { class = "linktui" },
+	float = true,
+	pin = true,
+	size = "660 585",
+	move = "1250 50",
+})
+
+-- fum — MPRIS music client, opens under the waybar music module (left side)
+hl.window_rule({
+	match = { class = "fum" },
+	float = true,
+	pin = true,
+	size = "410 500",
+	move = "230 50",
+})
+
+-- mirador — calendar/dashboard, opens under the waybar clock, near full size
+hl.window_rule({
+	match = { class = "mirador" },
+	float = true,
+	pin = true,
+	size = "(monitor_w*0.92) (monitor_h*0.87)",
+	move = "85 50",
+})
+
 -- ── Scratchpad terminal ──────────────────────────────────────────────────────
 -- Routes the persistent scratchpad kitty (class "scratch-term") onto the
 -- `scratch` special workspace as a centred floating window.

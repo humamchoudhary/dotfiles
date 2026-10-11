@@ -19,7 +19,7 @@
 
     "custom/launcher":{
         "format": "\uf40e",
-        "on-click": "rofi -show drun -show-icons -icon-theme Papirus-Dark -drun-display-format '{name}' -theme ~/.config/rofi/launcher.rasi",
+        "on-click": "~/.config/hypr/scripts/tui.sh fsel fsel -d",
         "tooltip": false
     },
     "custom/notification":{
@@ -32,7 +32,7 @@
         "format": "{}",
         "return-type": "json",
         "exec": "waybar-module-music  -a 15 --marquee --title-width 25  --effect-speed 500",
-        "on-click":"ags toggle Music"
+        "on-click":"~/.config/hypr/scripts/tui.sh fum fum"
     },
 
     "custom/special-wp-bg":{
@@ -44,7 +44,7 @@
         "format": "{:%A, %d %B - %I:%M %p}",
         "format-alt": "{:%A, %d %B - %I:%M %p}",
         "interval": 30,
-        "on-click":"ags toggle Clock"
+        "on-click":"~/.config/hypr/scripts/tui.sh mirador mirador"
     },
 
 
@@ -65,7 +65,7 @@
         "format-muted": "\ueee8",
         "format-icons": ["\uf026","\uf027","\uf028"],
         "scroll-step": 1,
-        "on-click": "ags toggle Audio",
+        "on-click": "~/.config/hypr/scripts/tui.sh wiremix wiremix",
         "ignored-sinks": ["Easy Effects Sink"],
         "tooltip":false
     },
@@ -78,20 +78,20 @@
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-        "on-click": "ags toggle Bluetooth"
+        "on-click": "~/.config/hypr/scripts/tui.sh -r linktui linktui -tab bluetooth"
     },
 
     "network#wifi": {
         "interface":"wlan0",
         "format-wifi": "<span font-size='12000'>\uf1eb</span>   <span font-size='10000'>{essid}</span>",
         "format-disconnected": "\udb82\udd2d",
-        "on-click": "ags toggle Wifi"
+        "on-click": "~/.config/hypr/scripts/tui.sh -r linktui linktui -tab wifi"
     },
     "network#eth": {
         "interface":"enp8s0",
         "format-wifi": "<span font-size='12000'>\udb81\udef3</span>",
         "format-disconnected": "\udb83\udc9b",
-        "on-click": "ags toggle Ethernet"
+        "on-click": "~/.config/hypr/scripts/tui.sh -r linktui linktui -tab wifi"
     },
 
     "battery": {

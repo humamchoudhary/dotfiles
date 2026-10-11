@@ -12,18 +12,29 @@ hl.bind("SUPER + Return", hl.dsp.exec_cmd("kitty"), { description = "Open Termin
 hl.bind("SUPER + e", hl.dsp.exec_cmd("kitty --class 'elio' elio ~/"), { description = "Open File Manager" })
 hl.bind(
 	"SUPER + x",
-	hl.dsp.exec_cmd(
-		"rofi -show drun -show-icons -icon-theme Papirus-Dark -drun-display-format '{name}' -theme ~/.config/rofi/launcher.rasi"
-	),
-	{ description = "App launcher" }
+	hl.dsp.exec_cmd("~/.config/hypr/scripts/tui.sh fsel fsel -d"),
+	{ description = "App launcher (fsel)" }
 )
-hl.bind("SUPER + v", hl.dsp.exec_cmd("bash ~/.config/hypr/scripts/clipboard.sh"), { description = "Clipboard history" })
+-- Clipboard history. -x copies HTML entries as plain text (cclipd stores the
+-- text/html flavour from browsers/editors; without this, pasting yields markup).
+-- fsel's --panel implies --dmenu and so can't be used in --cclip mode, so the
+-- keybind hints are drawn by kitty's tab bar instead.
+hl.bind(
+	"SUPER + v",
+	hl.dsp.exec_cmd(
+		"~/.config/hypr/scripts/tui.sh "
+			.. "-o tab_bar_edge=bottom -o tab_bar_min_tabs=1 -o tab_bar_style=separator "
+			.. "-o tab_separator= -o active_tab_font_style=normal "
+			.. '-o "tab_title_template= enter copy   alt+i preview   alt+del delete   esc cancel " '
+			.. "cclip fsel --cclip -x"
+	),
+	{ description = "Clipboard history" }
+)
 hl.bind(
 	"SUPER + equal",
-	hl.dsp.exec_cmd("rofi -show calc -modi calc -no-show-match -no-sort -theme ~/.config/rofi/launcher.rasi"),
-	{ description = "Calculator" }
+	hl.dsp.exec_cmd("~/.config/hypr/scripts/tui.sh hexowl hexowl"),
+	{ description = "Calculator (hexowl)" }
 )
-hl.bind("SUPER + w", hl.dsp.exec_cmd("bash ~/.config/hypr/scripts/websearch.sh"), { description = "Web search / URL" })
 hl.bind("SUPER + r", hl.dsp.exec_cmd("~/.config/hypr/scripts/reload.sh"))
 
 -- ── Window actions ─────────────────────────────────────────────────────────────
@@ -123,16 +134,20 @@ end
 hl.bind("SUPER + b", hl.dsp.window.move({ workspace = "special:bg" }), { description = "Send window to bg scratchpad" })
 
 -- ── System ─────────────────────────────────────────────────────────────────────
-hl.bind("SUPER + ALT + l", hl.dsp.exec_cmd("hyprlock"), { description = "Lock screen" })
-hl.bind("SUPER + ALT + p", hl.dsp.exec_cmd("~/.config/hypr/scripts/powermenu.sh"), { description = "Power menu" })
+hl.bind("SUPER + ALT + l", hl.dsp.exec_cmd("~/.local/share/quickshell-lockscreen/lock.sh"), { description = "Lock screen" })
+hl.bind(
+	"SUPER + ALT + p",
+	hl.dsp.exec_cmd("~/.config/hypr/scripts/tui.sh powermenu ~/.config/hypr/scripts/powermenu.sh"),
+	{ description = "Power menu" }
+)
 hl.bind(
 	"SUPER + ALT + t",
-	hl.dsp.exec_cmd("~/.config/dotthemes/rofi-theme-switcher.sh"),
+	hl.dsp.exec_cmd("~/.config/hypr/scripts/tui.sh themepick ~/.config/dotthemes/theme-picker.sh"),
 	{ description = "Theme switcher" }
 )
 hl.bind(
 	"SUPER + ALT + w",
-	hl.dsp.exec_cmd("~/.config/dotthemes/rofi-wallpaper-picker.sh"),
+	hl.dsp.exec_cmd("~/.config/hypr/scripts/tui.sh wallpick ~/.config/dotthemes/wallpaper-picker.sh"),
 	{ description = "Wallpaper picker" }
 )
 hl.bind("CTRL + n", hl.dsp.exec_cmd("~/.config/hypr/scripts/nightmode.sh"), { description = "Toggle night mode" })

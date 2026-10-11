@@ -1,0 +1,763 @@
+# mirador configuration
+#
+# This file was created automatically on first run. Every value below is a
+# default, so you can delete anything you do not want to override.
+#
+# mirador edits this file surgically and never reserialises it: switching a
+# panel on with `w`, or resizing one with Ctrl+←→↑↓, rewrites the one line it
+# has to and leaves your comments, spacing and ordering exactly as they were.
+# So it stays safe to hand-edit and to keep in version control.
+#
+# Preferences that are not layout — weather units, the task sort, seconds on
+# the clock, pomodoro durations — live in a separate state file beside your
+# tasks, which records only what you actually changed. Delete it and they fall
+# back to what is written here.
+#
+# Docs: https://github.com/jchultarsky/mirador#configuration
+
+[general]
+# How long mirador waits for a key or resize before looking around again,
+# in milliseconds. Not a frame budget: the screen is redrawn when something
+# actually changes, not on a clock, so lowering this does not make anything
+# smoother — it only wakes the process more often. Clamped to 16-5000.
+tick_rate_ms = 250
+show_borders = true
+show_status_bar = true
+
+# Click a panel to focus it, and scroll the wheel over a list to move through
+# it. The trade: while mirador holds the mouse, your terminal's own
+# click-to-select-text stops working, so copying a value off the dashboard
+# needs the terminal's override modifier — Shift in most, Option in macOS
+# Terminal and iTerm2. Set to false to keep ordinary text selection.
+mouse = true
+
+# Ask crates.io, at most once a day, whether a newer mirador exists, and say so
+# once in the status bar if it does.
+#
+# Off, and it stays off until you change this line. Everything else in mirador
+# talks to the network only because a panel you placed needs data; this would
+# talk on its own behalf, telling a third party your IP address and that you
+# run this program, on a schedule you did not pick. That is small, and it is
+# still the thing "nothing phones home" was promising.
+#
+# When it is on: no identifier is sent, the answer is cached in
+# update-check.toml beside your tasks, a failure is silent, and the notice
+# disappears on your first keypress. NO_UPDATE_CHECK or DO_NOT_TRACK in the
+# environment overrides this even when it is true — any non-empty value except
+# `0` counts, so `=1` and `=true` both work.
+check_for_updates = false
+
+# ---------------------------------------------------------------------------
+# Layout
+#
+# The dashboard is a grid of rows. `height` and `width` are relative weights,
+# not cell counts, so the proportions hold at any terminal size.
+#
+# Available widgets: clocks, weather, todo, notes, stocks, calendar, agenda,
+# pomodoro, watchlog, news, cpu, network, calculator — plus the id of any
+# external panel declared under "External panels" below
+# ---------------------------------------------------------------------------
+[layout]
+rows = [
+  { height = 30, panels = [
+    # Wide enough for two months side by side on a normal terminal; it falls
+    # back to one when the window is narrow.
+    { widget = "calendar", width = 38 },
+    { widget = "clocks",   width = 22 },
+    { widget = "weather",  width = 40 },
+  ] },
+  { height = 42, panels = [
+    { widget = "todo",     width = 30 },
+    { widget = "notes",    width = 32 },
+    # Type a sum, press Enter. It sits on this row rather than beside the
+    # markets panel because a fifth panel down there would narrow `stocks`
+    # below the width its change column needs.
+    { widget = "calculator", width = 26 },
+    # The timer draws block numerals when it has the width for them and falls
+    # back to plain text when it does not.
+    { widget = "pomodoro", width = 31 },
+  ] },
+  # The reading row. Both of these want width for prose rather than columns of
+  # numbers, so they get a row to themselves rather than being squeezed in
+  # beside the lists.
+  { height = 28, panels = [
+    # Memory's cells come from the three panels that scale — the timer and the
+    # two graphs — and none from the markets grid, which cannot give any.
+    { widget = "cpu",      width = 21 },
+    { widget = "memory",   width = 23 },
+    { widget = "network",  width = 21 },
+    { widget = "disk", width = 27 },
+    { widget = "temperature", width = 26 },
+    { widget = "battery", width = 19 },
+  ] },
+]
+
+# ---------------------------------------------------------------------------
+# External panels
+#
+# mirador can host a program you name as one dashboard tile. Nothing is ever
+# scanned or discovered: a plugin runs only when it is both declared here and
+# placed in [layout] by its id, and with neither, mirador starts no child
+# process at all. The tile is labelled EXTERNAL, because a plugin is somebody
+# else's program running with your permissions — it can do what mirador
+# promises never to do itself, like talk to a server of its own choosing.
+#
+# The command is an argv array run directly, never through a shell, and the
+# [plugins.config] table is handed to the plugin unread: its schema belongs to
+# the plugin. It is configuration, not secret storage — a plugin that needs a
+# login collects it in its own panel. The full protocol, with every bound the
+# host enforces, is docs/plugin-protocol.md in the repository.
+#
+#   [[plugins]]
+#   id = "example"
+#   command = ["example-mirador-plugin", "--optional-argument"]
+#
+#   [plugins.config]
+#   answer = 42
+#
+# Theme colors in here are managed by dotthemes/theme-picker.sh — it rewrites
+# the hex values to match the active palette. Body text is `reset` so it
+# inherits whatever foreground you have already tuned your terminal to.
+#
+# There are two ways to write this, and they use the same key.
+#
+# Press `t` in the dashboard to browse them. The list previews as you move, so
+# you can see a theme before choosing it, and `Esc` puts back what you had. A
+# theme picked that way is remembered in mirador's state file, which outranks
+# whatever this file says — so if you set a theme here and it seems to be
+# ignored, press `t` and pick it again, or delete the state file.
+#
+# Name a theme, and this whole table goes away:
+#
+#     theme = "high-contrast"
+#
+# Nineteen ship inside the binary. Four are mirador's own — `default` (this),
+# `default-light`, `high-contrast` and `ansi` — and twelve are ports of
+# palettes you may already be running elsewhere: `nord`, `gruvbox`,
+# `gruvbox-light`, `dracula`, `catppuccin-mocha`, `catppuccin-latte`,
+# `tokyo-night`, `kanagawa`, `solarized-dark`, `solarized-light`,
+# `everforest-light` and `rose-pine-dawn`. Five of the ports are light, so a
+# pale terminal has real choices beyond `default-light`.
+#
+# Anything in themes/<name>.toml beside this file is found first, so a bundled
+# theme can be replaced without renaming it. A theme file may `inherits`
+# another and may define a `[palette]` of named colours; see the README.
+#
+# Or keep the table below and set colours here. Naming a theme and writing the
+# table are mutually exclusive: TOML will not let one key be both a string and
+# a table, which is exactly the distinction being used.
+# ---------------------------------------------------------------------------
+[theme]
+border         = "#272730"   # frame of an unfocused panel
+border_focused = "#b57bee"   # frame of the focused panel
+rule           = "#272730"   # interior separators
+title          = "#b57bee"
+text           = "reset"     # inherits your terminal foreground
+muted          = "#6b6b78"   # units, hints, secondary values
+label          = "#7c4db0"   # column headers and tags
+accent         = "#b57bee"   # selection, focus, the clock
+key            = "#b57bee"   # the key letter in a hint
+success        = "#87af5f"
+warning        = "#d7af5f"
+error          = "#d75f5f"
+track          = "#272730"   # empty part of a meter, graph baseline
+
+# Gradients are three-stop ramps shared by a graph, its meter and its number,
+# so a panel changes temperature all at once. `start` is deliberately dark and
+# desaturated: a quiet graph then recedes into the background on its own.
+# Omit `end` for a flat colour; omit `mid` for a simple two-stop ramp.
+[theme.cpu_gradient]
+start = "#1a1a1f"
+mid   = "#7c4db0"
+end   = "#b57bee"
+
+[theme.rx_gradient]
+start = "#1a1a1f"
+mid   = "#7c4db0"
+end   = "#b57bee"
+
+[theme.tx_gradient]
+start = "#1a1a1f"
+mid   = "#7c4db0"
+end   = "#b57bee"
+
+# Two further ramps — [theme.gain_gradient] and [theme.loss_gradient], green
+# and red in the shipped themes — colour the markets panel: a row's change,
+# percentage and sparkline take their colour by the *size* of the day's move,
+# saturating at 2%. A drifting tenth of a percent sits at the ramp's dark
+# foot; a crash earns the bright end. Flat rows and stale ones stay muted.
+
+# ---------------------------------------------------------------------------
+# World clocks
+#
+# `timezone` is an IANA identifier, or the literal "local" for your system zone.
+# Add as many as you like; they render in the order listed.
+# ---------------------------------------------------------------------------
+# The FIRST zone is the large clock; the rest render as a labelled table
+# beneath it, showing their offset relative to that first zone.
+#
+# This list SEEDS your first run and is not read again. `a` adds a clock from
+# the panel and `d` removes the selected one, and the live list lives in
+# zones.toml beside your tasks — same arrangement as the watchlist, and for the
+# same reason: mirador never rewrites this file, so a list kept here could only
+# ever be changed in an editor. Edit zones.toml by hand if you prefer.
+[clocks]
+time_format = "%H:%M:%S"     # format for the secondary zone table
+date_format = "%A %d %B"     # shown under the large clock; empty hides it
+show_offset = true
+show_seconds = true          # seconds ride small beside the big HH:MM
+twelve_hour = false          # AM/PM clock, and table; `h` switches at runtime
+zones = [
+  { label = "Local",  timezone = "local" },
+  { label = "UTC",    timezone = "UTC" },
+  { label = "London", timezone = "Europe/London" },
+  { label = "Tokyo",  timezone = "Asia/Tokyo" },
+]
+
+# The panel's own keys, written as under [keys] at the end of this file. The
+# dialog it opens keeps its own.
+[clocks.keys]
+# seconds     = "s"
+# add         = "a"
+# edit        = "e"
+# move_up     = ["shift+up", "K"]
+# move_down   = ["shift+down", "J"]
+# twelve_hour = "h"
+# remove      = "d"
+# up          = ["up", "k"]
+# down        = ["down", "j"]
+# show_path   = "o"
+
+# ---------------------------------------------------------------------------
+# Weather
+#
+# Data comes from Open-Meteo (https://open-meteo.com), which needs no API key
+# and no account. `location` is geocoded once on startup; set `latitude` and
+# `longitude` explicitly to skip the lookup entirely.
+# ---------------------------------------------------------------------------
+[weather]
+location        = "Boston, Massachusetts"   # `L` changes this from the panel
+# latitude      = 42.3601
+# longitude     = -71.0589
+units           = "imperial"   # "imperial" (F, mph) or "metric" (C, km/h)
+                               # `u` switches at runtime; this is the start state
+forecast_hours  = 8            # a floor, not a cap: a taller panel shows more,
+                               # up to the 24 hours the fetch retrieves
+refresh_minutes = 30
+
+# The panel's own keys, written as under [keys] at the end of this file. The
+# dialog it opens keeps its own.
+[weather.keys]
+# refresh  = "r"
+# units    = "u"
+# location = "L"
+
+# ---------------------------------------------------------------------------
+# To-do list
+#
+# Tasks live in a plain TOML file you can edit by hand or keep in git. The
+# default location is your platform data directory; press `o` in the panel to
+# see the exact path.
+# ---------------------------------------------------------------------------
+[todo]
+# file         = "~/notes/todos.toml"
+show_completed = false
+sort           = "smart"       # smart | due | priority | created | title
+date_format    = "%a %d %b"
+horizon_days   = 0             # hide tasks due more than this many days out;
+                               # 0 shows all, and undated tasks always show
+
+# The list's own keys, written as under [keys] at the end of this file. The
+# form, the filter and the delete question keep theirs, and Esc always clears
+# a filter.
+[todo.keys]
+# add               = ["a", "n"]
+# edit              = ["enter", "e"]
+# done              = "space"
+# delete            = "d"
+# up                = ["up", "k"]
+# down              = ["down", "j"]
+# first             = ["g", "home"]
+# last              = ["G", "end"]
+# page_up           = "pageup"
+# page_down         = "pagedown"
+# priority_next     = "p"
+# priority_previous = "P"
+# sort              = "s"
+# completed         = "c"
+# filter            = "/"
+# show_path         = "o"
+
+# ---------------------------------------------------------------------------
+# Notes
+#
+# Free-form notes, listed by title and date with the selected one's body beside
+# the list. `a` writes one, `Enter` opens it, `d` deletes, `/` searches both
+# titles and bodies. Editor: Tab changes field, Enter makes a body line, Ctrl+S
+# saves; Shift+arrows selects, Ctrl+A all, Ctrl+C copies, and Ctrl+V pastes.
+#
+# `preview` puts the note body "below" the list or "beside" it. Below by
+# default: beside splits a finite width between a list that wants room for
+# titles and a body that wants room for prose, so neither gets enough. Stacking
+# gives both the full width and spends height, which is the cheaper axis here.
+# ---------------------------------------------------------------------------
+[notes]
+# file      = "~/notes/notes.toml"
+date_format = "%d %b"
+preview     = "below"        # below | beside
+
+# The list's own keys, written as under [keys] at the end of this file. The
+# editor, the search box and the delete question keep theirs, and Esc always
+# clears a search.
+[notes.keys]
+# new         = ["a", "n"]
+# edit        = ["enter", "e"]
+# delete      = "d"
+# up          = ["up", "k"]
+# down        = ["down", "j"]
+# first       = ["g", "home"]
+# last        = ["G", "end"]
+# scroll_up   = "pageup"
+# scroll_down = "pagedown"
+# search      = "/"
+# show_path   = "o"
+
+# ---------------------------------------------------------------------------
+# Stock watchlist
+#
+# Last price, the day's change, and an intraday sparkline. `a` adds a symbol,
+# `d` removes one, `r` refreshes now.
+#
+# The default is the five major US indexes — S&P 500, Dow, Nasdaq Composite,
+# Russell 2000 and Nasdaq-100 — followed by two ordinary stocks, so the panel
+# shows both kinds out of the box. `^VIX` is the volatility index if you want
+# it; `EURUSD=X` and `BTC-USD` also work.
+#
+# `symbols` seeds the watchlist on the FIRST RUN ONLY. After that the watchlist
+# file is the truth, so symbols you add or remove in the UI stick. Only symbols
+# are stored — prices are never written to disk, because a stale price read as
+# live is worse than no price at all.
+#
+# `source` picks where quotes come from. This is pluggable on purpose: the
+# default gates on IP reputation rather than on a key, and blocks datacenter and
+# VPN addresses outright, so the same build works on a laptop and fails on a
+# VPS. If you see persistent HTTP 429, that is what has happened, and no polling
+# rate will fix it.
+#
+# `refresh_secs` is clamped to a minimum of 60, and symbols are requested one at
+# a time `stagger_ms` apart rather than all at once — that delay is itself
+# clamped to 100 through 10,000 ms. These services are free and
+# unauthenticated; hammering them gets the address blocked for everyone on it.
+# ---------------------------------------------------------------------------
+[stocks]
+symbols        = ["^GSPC", "^DJI", "^IXIC", "^RUT", "^NDX", "AAPL", "MSFT"]
+# file         = "~/notes/watchlist.toml"
+source         = "yahoo"
+refresh_secs   = 120
+stagger_ms     = 400
+show_sparkline = true
+
+# The panel's own keys, written as under [keys] at the end of this file. The
+# add box and the remove question keep theirs.
+[stocks.keys]
+# add       = "a"
+# remove    = "d"
+# refresh   = "r"
+# up        = ["up", "k"]
+# down      = ["down", "j"]
+# first     = ["g", "home"]
+# last      = ["G", "end"]
+# show_path = "o"
+
+# ---------------------------------------------------------------------------
+# Calendar
+#
+# A month grid in the shape `cal` prints, with today marked. `n` and `p` step a
+# month, the arrow keys step a month or a year, `t` returns to today, and the
+# scroll wheel steps a month.
+#
+# `months` is how many sit side by side, and so how wide the panel ever gets —
+# past that it hands the columns to its neighbours instead of spreading out. It
+# is a floor on how many are shown, not a ceiling: a tall panel stacks further
+# rows of months rather than leaving a void, up to a year in view at once.
+# ---------------------------------------------------------------------------
+[calendar]
+months      = 2          # months across; more stack when there is height.
+                         # At most 12 — a year is already the whole cycle
+week_starts = "sunday"   # sunday | monday
+
+# The panel's own keys, written as under [keys] at the end of this file.
+[calendar.keys]
+# next_month     = ["n", "right", "l"]
+# previous_month = ["p", "left", "h"]
+# today          = "t"
+# previous_year  = ["up", "k"]
+# next_year      = ["down", "j"]
+
+# ---------------------------------------------------------------------------
+# Agenda
+#
+# What is next, read from an .ics file on your disk. mirador does not sign in
+# to a calendar server and is not going to: that means an account, a token to
+# refresh, and a background process with opinions about your credentials.
+#
+# Point `file` at a calendar you already have. Whatever keeps it up to date is
+# your business — an export, a vdirsyncer run, a cron job with curl, a symlink
+# into a folder something else syncs. The file is re-read on a timer and when
+# you press `r`, so anything that rewrites it shows up on its own.
+#
+# Until `file` is set the panel says so and names the path it looked at, which
+# is `calendar.ics` beside your tasks and notes. Nothing creates that file:
+# unlike the task list, an empty calendar mirador invented would be a lie
+# about your day.
+#
+# Recurring events are expanded for the common rules — daily, weekly with
+# BYDAY, monthly and yearly, with INTERVAL, COUNT, UNTIL and EXDATE. A rule
+# using anything more elaborate shows only its first occurrence rather than
+# guessing, because a calendar that invents a meeting is worse than one that
+# misses a repeat.
+# ---------------------------------------------------------------------------
+[agenda]
+# file        = "~/calendar.ics"   # `f` sets this from the panel, with Tab
+                                   # completing path segments as you type
+days          = 7        # how far ahead to look; clamped to 1 through 365
+show_location = true     # show the location when the row has room for both
+refresh_secs  = 60       # how often to re-read the file; no faster than 5
+
+# The panel's own keys, written as under [keys] at the end of this file. The
+# dialog it opens keeps its own.
+[agenda.keys]
+# file      = "f"
+# reload    = "r"
+# up        = ["up", "k"]
+# down      = ["down", "j"]
+# first     = ["g", "home"]
+# last      = ["G", "end"]
+# page_up   = "pageup"
+# page_down = "pagedown"
+# show_path = "o"
+
+# ---------------------------------------------------------------------------
+# News
+#
+# Headlines from RSS feeds you choose. A topic *is* a feed here — RSS has no
+# topic parameter, so subscribing to a science feed is how you ask for science.
+# Add or remove entries freely; `name` is what shows above the headline.
+#
+# The panel is deliberately a window rather than a reader: it shows however
+# many stories fit and no more, there is no scrolling, no count, no unread
+# state and nothing to dismiss. You glance at it. If that sounds thin, it is
+# the same reasoning that keeps unread-message counts off this dashboard.
+#
+# The shipped feeds are science, space and technology only. Choosing outlets
+# for general or political news is an editorial act this project has no
+# business making on your behalf — add your own if you want them.
+#
+# Only the headline, the link and the date are read. Feed summaries are article
+# prose belonging to whoever wrote them.
+# ---------------------------------------------------------------------------
+[news]
+refresh_minutes = 60     # also the floor; news moves slower than a dashboard
+per_feed        = 4      # kept from each feed, so a chatty one cannot crowd
+                         # out a quiet one. Stories are then interleaved, so
+                         # the top of the panel holds one from each.
+                         # Clamped to 1 through 20.
+
+# What Enter runs on the selected story, with the link added as the last
+# argument. Empty means Enter opens nothing — mirador launches no program you
+# did not name. Run directly rather than through a shell, so nothing in a URL
+# can be read as shell syntax. Do not name a shell such as cmd or PowerShell:
+# it would read the link as a command line, and mirador refuses to hand it one.
+# Only http and https links are opened.
+#
+#   open_command = ["open"]                                     # macOS
+#   open_command = ["xdg-open"]                                 # Linux
+#   open_command = ["rundll32", "url.dll,FileProtocolHandler"]  # Windows
+#
+# `y` copies the link instead, by asking the terminal (OSC 52). That needs no
+# configuration, but some terminals refuse it and tmux wants `set-clipboard on`.
+# open_command = []
+
+[[news.feeds]]
+name = "NASA"
+url  = "https://www.nasa.gov/news-release/feed/"
+
+[[news.feeds]]
+name = "PHYS.ORG"
+url  = "https://phys.org/rss-feed/space-news/"
+
+[[news.feeds]]
+name = "ARS TECHNICA"
+url  = "https://feeds.arstechnica.com/arstechnica/index"
+
+# The panel's own keys, written as under [keys] at the end of this file.
+[news.keys]
+# show_link = "o"
+# copy      = "y"
+# open      = "enter"
+# refresh   = "r"
+# up        = ["up", "k"]
+# down      = ["down", "j"]
+
+# ---------------------------------------------------------------------------
+# Watch log
+#
+# What changed since you last looked. Nothing to set but its keys.
+# ---------------------------------------------------------------------------
+[watchlog]
+
+# The panel's own keys, written as under [keys] at the end of this file.
+[watchlog.keys]
+# up        = ["up", "k"]
+# down      = ["down", "j"]
+# first     = ["g", "home"]
+# last      = ["G", "end"]
+# page_up   = "pageup"
+# page_down = "pagedown"
+
+# ---------------------------------------------------------------------------
+# Pomodoro
+#
+# A focus timer. `space` starts and pauses, `n` skips to the next phase, `r`
+# puts the current phase back to full, and `+`/`-` change the length of
+# whichever phase you are in by a minute.
+#
+# The values below are where the timer *starts*. Changes made with `+` and `-`
+# are remembered across restarts in mirador's own state file — this file is
+# never rewritten. Only a phase you actually adjusted is remembered, so editing
+# a duration here still works. Delete the state file to go back to these.
+#
+# `chime` is off by default, because a dashboard you leave open all day has no
+# business making noise you did not ask for. With no `chime_command` it rings
+# the terminal bell, which costs nothing and lets your terminal decide whether
+# that means a sound, a flash, or silence. mirador deliberately ships no audio
+# library: playing a file means linking your platform's audio stack, which is a
+# large amount of machinery for one notification.
+#
+# To play an actual sound, give a program and its arguments. It is run
+# directly, not through a shell, so there is no quoting to get wrong:
+#
+#   chime_command = ["afplay", "/System/Library/Sounds/Glass.aiff"]   # macOS
+#   chime_command = ["paplay", "/usr/share/sounds/freedesktop/stereo/complete.oga"]  # Linux
+# ---------------------------------------------------------------------------
+[pomodoro]
+focus_minutes            = 25
+short_break_minutes      = 5
+long_break_minutes       = 15
+rounds_before_long_break = 4   # focus intervals per set, then the long break
+auto_start               = false  # begin the next phase without a keypress
+chime                    = false
+chime_command            = []
+
+# The panel's own keys, written as under [keys] at the end of this file.
+[pomodoro.keys]
+# toggle  = "space"
+# next    = "n"
+# longer  = ["+", "="]
+# shorter = ["-", "_"]
+# reset   = "r"
+
+# ---------------------------------------------------------------------------
+# CPU
+# ---------------------------------------------------------------------------
+[cpu]
+history       = 120            # a floor on the samples kept, not a cap: the
+                               # buffer grows to what a wider panel can draw
+sample_secs   = 2             # seconds between samples. Every sample is a new
+                              # number, and a new number means a repaint, so
+                              # this and [network] set the floor on what an idle
+                              # dashboard costs: 66 redraws a minute at 1, 36 at
+                              # 2, with the clock's seconds off. 1 watches more
+                              # closely; 2 covers twice the time in the same
+                              # chart.
+show_per_core = true
+
+# The panel's own keys, written as under [keys] at the end of this file.
+[cpu.keys]
+# per_core = "c"
+
+# ---------------------------------------------------------------------------
+# Memory
+#
+# Memory in use as a percentage, a moving chart of it, and a swap meter when
+# the machine has swap. `s` hides and shows the swap row.
+# ---------------------------------------------------------------------------
+[memory]
+history     = 120             # a floor, not a cap — see the note under [cpu]
+sample_secs = 2               # see the note under [cpu]
+show_swap   = true
+
+# The panel's own keys, written as under [keys] at the end of this file.
+[memory.keys]
+# swap = "s"
+
+# ---------------------------------------------------------------------------
+# Disk
+#
+# Every volume that can fill up, how full it is, and what is free — one line
+# of figures over a meter per device. Volumes that share a device are folded
+# into one row (`/` and `/System/Volumes/Data` are one APFS container), and
+# read-only ones are left out, since nothing can fill them. Brass while there
+# is room, amber at `warn_above_pct`, red at `alert_above_pct` — where the
+# status bar says so too. Under each device, a `↓ read ↑ write` readout and
+# two graphs of its I/O, scaled to its own peak; `i` hides them. Not in the
+# default layout: the instrument row is full at 120 columns. `w` switches it on.
+# ---------------------------------------------------------------------------
+[disk]
+sample_secs     = 30          # capacity; the list is re-read this often
+io_sample_secs  = 2           # the graphs; see the note under [cpu]
+history         = 120         # a floor, not a cap — see the note under [cpu]
+show_io         = true
+warn_above_pct  = 80
+alert_above_pct = 95
+
+# The panel's own keys, written as under [keys] at the end of this file.
+[disk.keys]
+# io = "i"
+
+# ---------------------------------------------------------------------------
+# Battery
+#
+# Charge, which way it is going, and how long that gives you. Not in the
+# default layout, because a desktop would open on an empty panel — press `w`
+# and switch it on. Below `warn_below_pct` the figure turns amber while running
+# on the battery; below `alert_below_pct` it turns red and the status bar says
+# so. Neither applies while plugged in.
+# ---------------------------------------------------------------------------
+[battery]
+sample_secs     = 30
+warn_below_pct  = 20
+alert_below_pct = 10
+
+# ---------------------------------------------------------------------------
+# Temperature
+#
+# The hottest sensor with its history, and a table of every sensor group's
+# current and peak reading. Sensors are grouped the way a person would list
+# them: fourteen die readings become one `CPU die` row. Not in the default
+# layout, because the panel reads what the platform reports, and that is
+# uneven: Windows exposes at most one ACPI zone, and not on every machine;
+# NetBSD's envsys sensors are not read yet; a VM or a container has none.
+# `w` switches it on; `u` toggles the units.
+# ---------------------------------------------------------------------------
+[temperature]
+history       = 120           # a floor, not a cap — see the note under [cpu]
+sample_secs   = 5
+units         = "celsius"     # or "fahrenheit"
+alert_above_c = 95            # the status bar says so above this; 0 disables
+
+# The panel's own keys, written as under [keys] at the end of this file.
+[temperature.keys]
+# units = "u"
+
+# ---------------------------------------------------------------------------
+# Network
+#
+# Leave `interfaces` empty to aggregate every non-loopback interface, or name
+# the ones you care about, e.g. interfaces = ["en0"].
+# ---------------------------------------------------------------------------
+[network]
+interfaces  = []
+history     = 120             # a floor, not a cap — see the note under [cpu]
+sample_secs = 2               # see the note under [cpu]. Sampling the
+                              # interface list is the more expensive of the
+                              # two by roughly fifteen times.
+
+# ---------------------------------------------------------------------------
+# Keys
+#
+# The dashboard's own keys, moved wherever you like. Every line below is the
+# default; uncomment one and change it. A key is written in words:
+# "q", "?", "tab", "shift+tab", "space", "f5", "ctrl+left", "alt+h". Give an
+# action a list for several keys — quit = ["q", "x"] — or [] to unbind it.
+#
+# The resize keys are read before the focused panel sees them, so each needs
+# Ctrl or Alt held. On a Mac, where Ctrl+arrows switch desktops, it depends on
+# the terminal. iTerm2 passes Option+arrows through as Alt+arrows, so
+# "alt+right" and its siblings work as they are. Terminal passes no Option
+# arrow through intact: turn on "Use Option as Meta key" and use letters,
+#   resize_narrower = "alt+h"
+#   resize_taller   = "alt+j"
+#   resize_shorter  = "alt+k"
+#   resize_wider    = "alt+l"
+# and leave Option+up and Option+down alone there, which that setting sends
+# as Esc and two characters: the Esc backs out of whatever is open.
+#
+# Every other key here is offered to the focused panel first, so a panel that
+# uses a key keeps it while that panel is focused. Two keys are not in this
+# list and cannot be put in it: Ctrl+C always quits, and Esc always backs out
+# of whatever is open. 1-9 still jump straight to a panel. A key given to two
+# actions is refused at startup, with the line to change.
+#
+# Every panel's own keys move the same way, in a table under the panel's
+# section — [todo.keys], [cpu.keys] and the rest, each listing its actions
+# with their defaults. A panel key may be one the dashboard also uses, and
+# wins while that panel is focused, but not a resize key, which the panel
+# would never see. The calculator has no table: its keys are what you type.
+#
+# Press ? twice in mirador to see every key with its default, load an edit
+# here or in a panel's table without restarting (r), or put every key back to
+# its default (d).
+# If a mistake here stops mirador starting, `mirador --reset-keys` does the
+# same from the command line. Either way your lines are commented out, not
+# deleted.
+# ---------------------------------------------------------------------------
+[keys]
+# focus_next      = "tab"
+# focus_previous  = "shift+tab"
+# help            = "?"
+# quit            = "q"
+# panels          = "w"
+# arrange         = "m"
+# theme           = "t"
+# resize_wider    = "ctrl+right"
+# resize_narrower = "ctrl+left"
+# resize_taller   = "ctrl+down"
+# resize_shorter  = "ctrl+up"
+
+# Arrange mode's keys, while `m` is on. Esc always cancels the arrangement
+# and 1-9 still pick a panel, so neither is here. The resize keys above keep
+# working in the mode, so none of these may be one of them.
+[arrange.keys]
+# move_left      = ["left", "h"]
+# move_right     = ["right", "l"]
+# move_up        = ["up", "k"]
+# move_down      = ["down", "j"]
+# row_up         = ["shift+up", "K"]
+# row_down       = ["shift+down", "J"]
+# keep           = ["enter", "m", "q"]
+# focus_next     = "tab"
+# focus_previous = "shift+tab"
+
+# The panel picker's keys, while `w` is open. Esc always closes it, whatever
+# else does.
+[panel_picker.keys]
+# up     = ["up", "k"]
+# down   = ["down", "j"]
+# first  = ["home", "g"]
+# last   = ["end", "G"]
+# toggle = "space"
+# close  = ["enter", "q", "w"]
+
+# The theme picker's keys, while `t` is open. Esc always puts back the theme
+# you had, whatever else does.
+[theme_picker.keys]
+# up        = ["up", "k"]
+# down      = ["down", "j"]
+# first     = "home"
+# last      = "end"
+# page_up   = "pageup"
+# page_down = "pagedown"
+# keep      = ["enter", "space"]
+# put_back  = ["q", "t"]
+
+# The help overlay's scroll keys, while `?` is open and there is more than
+# fits. Any other key closes it, and the key that opened it goes on to the
+# key map, so none of these may be that key.
+[help_overlay.keys]
+# up        = ["up", "k"]
+# down      = ["down", "j"]
+# page_up   = "pageup"
+# page_down = "pagedown"
+# first     = "home"
+# last      = "end"

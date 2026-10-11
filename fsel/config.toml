@@ -1,0 +1,74 @@
+# fsel — app launcher config (fsel 4.0.0+)
+# Theme colors in here are managed by dotthemes/theme-picker.sh — it rewrites
+# the hex values to match the active palette. Hex values appear once each.
+
+# ===== LOOK =====
+# Flat and borderless: Reset inherits the (themed) terminal background.
+# WARNING: color/UI options stay at ROOT LEVEL, not inside [sections].
+
+highlight_color = "#b57bee"          # accent — cursor + selection marker
+header_title_color = "#b57bee"       # accent (panel titles are hidden)
+main_text_color = "#c8c8d4"          # body text
+items_text_color = "#c8c8d4"
+input_text_color = "#f0f0f5"
+pin_color = "#b57bee"
+main_background_color = "Reset"
+items_background_color = "Reset"
+items_selection_background_color = "#1a1a1f"   # elevated
+input_background_color = "Reset"
+
+# Borderless, flat chrome
+rounded_borders = false
+show_main_border = false
+show_items_border = false
+show_input_border = false
+show_panel_titles = false
+show_input_count = false
+show_input_prompt = true
+show_selection_marker = true
+selection_marker = ""
+show_pin_icons = true
+items_selection_rounded = false
+input_panel_style = "command"
+
+# Compact geometry: no info panel, one-line input
+title_panel_height_percent = 0
+input_panel_height = 1
+title_panel_position = "top"
+
+# Launch terminal apps inside kitty
+terminal_launcher = "kitty -e"
+
+# ===== SECTIONS =====
+
+[app_launcher]
+# Icons beside each result row (XDG theme auto-detected)
+icon_mode = "list"
+icon_list_width = 4                  # 1-16 terminal columns
+icon_list_height = 2                 # 1-8 terminal rows per app
+icon_list_gap = 1                    # columns between icon and label
+icon_size = 128                      # preferred themed-icon size
+icon_theme = "Tela-circle-black"     # installed icon theme (auto-detect fallback: Adwaita)
+
+filter_desktop = true
+list_executables_in_path = false
+match_mode = "fuzzy"
+ranking_mode = "frecency"
+pinned_order = "ranking"
+prefix_depth = 3
+
+# ===== DMENU (power menu, pickers) =====
+# Pickers pass --info-size <N> per invocation to show image previews
+# (theme palette / wallpaper); the power menu runs with the default 0.
+[dmenu]
+title_panel_height_percent = 0
+show_line_numbers = false
+wrap_long_lines = false
+
+# ===== CCLIP (clipboard history, backed by cclipd) =====
+# Text rows carry full content snippets (cclipd -P 256); image entries render
+# inline via the kitty graphics protocol. Alt+i opens a fullscreen preview.
+[cclip]
+image_preview = true
+show_line_numbers = false
+wrap_long_lines = true
