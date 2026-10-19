@@ -1,5 +1,5 @@
-require("conf.animations")
 require("conf.autostart")
+require("conf.animations")
 require("conf.config")
 require("conf.keybinds")
 require("conf.monitor")

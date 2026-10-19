@@ -16,7 +16,7 @@ hl.window_rule({
 })
 
 hl.window_rule({
-	match = { class = "elio" },   -- or initial_class, depending on the wrapper's naming
+	match = { class = "elio" }, -- or initial_class, depending on the wrapper's naming
 	float = true,
 	size = "(monitor_w*0.65) (monitor_h*0.65)",
 	center = true,
@@ -195,4 +195,12 @@ hl.window_rule({
 	pin = true,
 	center = true,
 	size = "(monitor_w*0.5) (monitor_h*0.5)",
+})
+
+hl.window_rule({
+	match = {
+		class = "steam_app",
+	},
+	fullscreen = true,
+	confine_pointer = true,
 })

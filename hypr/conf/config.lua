@@ -53,5 +53,8 @@ hl.config({
     },
     binds={
         drag_threshold = 10 
-    }
+    },
+    cursor = {
+        no_hardware_cursors = 1,
+    },
 })

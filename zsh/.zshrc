@@ -27,6 +27,18 @@ command -v go >/dev/null 2>&1 && export PATH="$PATH:$(go env GOPATH)/bin"  # Go 
 fpath=("$ZDOTDIR/completions" "${fpath[@]}")
 
 
+# ---------- Inline suggestions (ghost text) ----------
+# zsh-autosuggestions draws the rest of a remembered command ahead of the
+# cursor in dim grey; it replaces atuin, which used to own this and Ctrl+R.
+#   right-arrow / End  accept the whole suggestion
+#   Ctrl+F             accept one word of it
+#   Ctrl+R             fzf history search (from the fzf plugin below)
+# Vars must be set BEFORE the plugin is sourced by oh-my-zsh.
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'           # dim grey ghost text
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)    # past commands first, then completions
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=30               # don't suggest for very long lines
+
+
 # ---------- Oh My Zsh ----------
 # ZSH_THEME stays empty because the prompt belongs to starship (below).
 # oh-my-zsh just supplies the plugins and helper functions.
@@ -38,6 +50,10 @@ if [ -d "$HOME/.oh-my-zsh" ]; then
     plugins=(git sudo z extract zsh-256color zsh-completions zsh-syntax-highlighting zsh-history-substring-search zsh-autosuggestions zsh-interactive-cd fzf virtualenv  docker)
     source "$ZSH/oh-my-zsh.sh"
 fi
+
+# Accept just the next word of the inline suggestion.
+bindkey '^F' forward-word
+
 
 # ---------- Custom functions & completions ----------
 # Drop a .zsh file into the functions/ or completions/ folder and it's loaded here.
@@ -91,8 +107,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 
-# awen — terminal intelligence layer
-[ -f "$HOME/.config/awen/awen.zsh" ] && source "$HOME/.config/awen/awen.zsh"
+# awen — terminal intelligence layer. Left off on purpose: its shell
+# integration wraps the prompt and fights the inline suggestions above.
+# Uncomment to bring it back.
+# [ -f "$HOME/.config/awen/awen.zsh" ] && source "$HOME/.config/awen/awen.zsh"
 
 
 # ---------- Startup art ----------
@@ -109,10 +127,6 @@ fi
 
 # ---------- Personal config (sourced last so it wins) ----------
 [ -f "$ZDOTDIR/user.zsh" ] && source "$ZDOTDIR/user.zsh"
-
-. "$HOME/.atuin/bin/env"
-
-eval "$(atuin init zsh)"
 
 # >>> elio shell integration >>>
 elio() {
